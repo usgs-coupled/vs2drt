@@ -1,0 +1,10 @@
+SOLUTION 0  CaCl2
+        units            mmol/kgw
+        Cl               1200.
+SOLUTION 1  Initial solution for column
+        units            mmol/kgw
+        Cl               1200.
+SOLUTION 2  Initial solution for column
+        units            mmol/kgw
+        Cl               1200.        
+END
