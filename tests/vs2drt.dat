@@ -1,4 +1,4 @@
- Example 11
+Example 11
 72000 0 0.
 m
 seconds
@@ -7,10 +7,10 @@ Joule
 3 42
 1 870
 F T F T	
-chemTest.dat
+chemEx11.dat
 phreeqc.dat	
 pre	
-T f	
+T t	
 1 0 1 1 1
 T F T F F 
 F F T F T
@@ -37,7 +37,7 @@ T
 0 1.
 F F 
 0
-2 -1 -1 -1 -1 -1 -1
+1 -1 -1 -1 -1 -1 -1
 72000 720
 1 720 720 0
 10 0
@@ -47,7 +47,7 @@ F F F
 0
 2 2 2 2.778e-6
 0 0 1 1.
-41 2 1 1.
+41 2 2 -2.778e-6
 0 1 0 1.	
 999999 /
 999999 /
