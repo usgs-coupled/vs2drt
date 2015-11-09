@@ -1,0 +1,813 @@
+                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                   +                           VS2DRT                         +
+                                   +                        VERSION 1.1                       +
+                                   +           SIMULATION OF 2-DIMENSIONAL VARIABLY           +
+                                   +            SATURATED REACTIVE TRANSPORT                  +
+                                   +                   THROUGH POROUS MEDIA.                  +
+                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+ ****************************************************************************************************
+                                                                                     
+ ****************************************************************************************************
+
+          SPACE AND TIME CONSTANTS
+          -----------------------
+     MAXIMUM SIMULATION TIME =   0.129600E+07 sec 
+     STARTING TIME =     0.0000
+     NUMBER OF RECHARGE PERIODS =         1
+     MAXIMUM NUMBER OF TIME STEPS =        870
+     NUMBER OF ROWS =     17
+     NUMBER OF COLUMNS =      3
+     AXES TILTED BY ANGLE =     0.00
+          SOLUTION OPTIONS
+          ----------------
+     WRITE ALL PRESSURE HEADS TO FILE 8 AT OBSERVATION TIMES? T
+     STOP SOLUTION IF MAXIMUM NO. OF ITERATIONS EXCEEDED IN ANY TIME STEP? T
+     WRITE BOUNDARY FLUXES TO FILE 7? F
+     WRITE RESULTS AT SELECTED OBSERVATION POINTS TO FILE 11? T
+     WRITE MASS BALANCE RATES TO FILE 9? F
+     WRITE MASS BALANCE RATES TO FILE 6? F
+     WRITE MOISTURE CONTENTS TO FILE 6? F
+     WRITE SATURATIONS TO FILE 6? F
+     WRITE PRESSURE HEADS TO FILE 6? T
+     WRITE TOTAL HEADS TO FILE 6? F
+     WRITE VELOCITIES TO FILE 6? T
+H2O       
+H         
+O         
+Charge    
+Amm       
+C         
+N         
+                                                  GRID SPACING IN VERTICAL DIRECTION, IN m   
+     0.100     0.100     0.100     0.100     0.100     0.100     0.100     0.100     0.100     0.100
+     0.100     0.100     0.100     0.100     0.100     0.100     0.100
+                                                  GRID SPACING IN HORIZONTAL OR RADIAL DIRECTION, IN m   
+     1.000     1.000     1.000
+     TIMES AT WHICH H WILL BE WRITTEN TO FILE 08
+      0.12960E+07
+     ROW AND COLUMN OF OBSERVATION POINTS:
+     16    2
+     COORDINATE SYSTEM IS RECTANGULAR
+     TRANSPORT TO BE SIMULATED
+     CENTRAL DIFFERENCING IN SPACE USED FOR TRANSPORT EQUATION
+     CENTRAL DIFFERENCING IN TIME USED FOR TRANSPORT EQUATION
+     MATRIX EQUATIONS TO BE SOLVED BY SIP
+          INITIAL MOISTURE PARAMETERS
+          ___________________________
+
+     CONVERGENCE CRITERION FOR SIP FOR FLOW (EPS) =   1.000E-05 m   
+     CONVERGENCE CRITERION FOR SIP FOR HEAT TRANSPORT (EPS1) =   1.000E-07
+     CONVERGENCE CRITERION FOR OUTER'ITERATION (EPS2)  =    1.000E-05
+     CONVERGENCE CRITERION'FOR SIP FOR SOLUTE TRANSPORT(EPS3) =   1.000E-09
+     DAMPING FACTOR,HMAX = ,   7.000E-01
+     GEOMETRIC MEAN USED FOR INTERCELL CONDUCTIVITY
+     NUMBER OF SOIL TEXTURAL CLASSES =          2
+     NUMBER OF SOIL PARAMETERS FOR EACH CLASS =          6
+     NUMBER OF HEAT TRANSPORT PARAMETERS FOR EACH CLASS =          6
+     NUMBER OF SOLUTE TRANSPORT PARAMETERS FOR EACH CLASS =          3
+     MINIMUM PERMITTED NO. OF ITERATIONS/TIME STEP =         2
+     MAXIMUM PERMITTED NO. OF ITERATIONS/TIME STEP =       200
+                                         CONSTANTS FOR SOIL TEXTURAL CLASSES
+
+          ANISOTROPY       KSAT     SPECIFIC    POROSITY
+                                    STORAGE
+            ALPHAL        ALPHAT      Cs         KT MIN     KT MAX        Cw   
+            ALPHAL        ALPHAT      DM
+ CLASS # 1
+            1.000D+00   0.000D+00   0.000D+00   1.000D+00   0.000D+00   0.000D+00   0.000D+00
+            0.000D+00   0.000D+00   0.000D+00   0.000D+00   0.000D+00   0.000D+00
+            0.000D+00   0.000D+00   0.000D+00
+ CLASS # 2
+            1.000D+00   1.160D-06   1.000D-06   1.000D+00   5.050D-03   1.700D-01   7.000D+00
+            1.000D-01   1.000D-01   2.180D+06   1.000D+00   1.800D+00   4.180D+06
+            1.000D-01   1.000D-01   0.000D+00
+      TEXTURAL CLASS INDEX MAP
+
+
+     TEXTURAL CLASS TO BE READ IN FOR EACH ROW
+          1  111
+          2  121
+          3  121
+          4  121
+          5  121
+          6  121
+          7  121
+          8  121
+          9  121
+         10  121
+         11  121
+         12  121
+         13  121
+         14  121
+         15  121
+         16  121
+         17  111
+     INITIAL PRESSURE HEAD OR MOISTURE CONTENT WAS SET TO A CONSTANT VALUE OF   1.000E+00
+     INITIAL PRESSURE HEAD OR MOISTURE CONTENT WAS READ FROM UNIT    0 A SCALING FACTOR OF   1.000E+00 WAS USED
+     INITIAL TEMPERATURE SET TO A CONSTANT VALUE OF    2.000E+01
+    H2O         0.000000
+    H           0.000000
+    O           0.000000
+    Charge      0.000000
+    Amm         0.000000
+    C           0.000000
+    N           0.000000
+                                                                                      
+     TOTAL ELAPSED TIME =  0.000000E+00 sec 
+     TIME STEP         0
+
+
+                                                   PRESSURE HEAD
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+                0.500
+     0.050  1.000E+00
+     0.150  1.000E+00
+     0.250  1.000E+00
+     0.350  1.000E+00
+     0.450  1.000E+00
+     0.550  1.000E+00
+     0.650  1.000E+00
+     0.750  1.000E+00
+     0.850  1.000E+00
+     0.950  1.000E+00
+     1.050  1.000E+00
+     1.150  1.000E+00
+     1.250  1.000E+00
+     1.350  1.000E+00
+     1.450  1.000E+00
+                                                   TEMPERATURE
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+                0.500
+     0.050    20.0000
+     0.150    20.0000
+     0.250    20.0000
+     0.350    20.0000
+     0.450    20.0000
+     0.550    20.0000
+     0.650    20.0000
+     0.750    20.0000
+     0.850    20.0000
+     0.950    20.0000
+     1.050    20.0000
+     1.150    20.0000
+     1.250    20.0000
+     1.350    20.0000
+     1.450    20.0000
+                                                   CONCENTRATION
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+              0.50
+H2O       
+     0.05 9.97E+05
+     0.15 9.97E+05
+     0.25 9.97E+05
+     0.35 9.97E+05
+     0.45 9.97E+05
+     0.55 9.97E+05
+     0.65 9.97E+05
+     0.75 9.97E+05
+     0.85 9.97E+05
+     0.95 9.97E+05
+     1.05 9.97E+05
+     1.15 9.97E+05
+     1.25 9.97E+05
+     1.35 9.97E+05
+     1.45 9.97E+05
+H         
+     0.05 1.66E-04
+     0.15 1.66E-04
+     0.25 1.66E-04
+     0.35 1.66E-04
+     0.45 1.66E-04
+     0.55 1.66E-04
+     0.65 1.66E-04
+     0.75 1.66E-04
+     0.85 1.66E-04
+     0.95 1.66E-04
+     1.05 1.66E-04
+     1.15 1.66E-04
+     1.25 1.66E-04
+     1.35 1.66E-04
+     1.45 1.66E-04
+O         
+     0.05 8.20E+00
+     0.15 8.20E+00
+     0.25 8.20E+00
+     0.35 8.20E+00
+     0.45 8.20E+00
+     0.55 8.20E+00
+     0.65 8.20E+00
+     0.75 8.20E+00
+     0.85 8.20E+00
+     0.95 8.20E+00
+     1.05 8.20E+00
+     1.15 8.20E+00
+     1.25 8.20E+00
+     1.35 8.20E+00
+     1.45 8.20E+00
+Charge    
+     0.05-9.98E-04
+     0.15-9.98E-04
+     0.25-9.98E-04
+     0.35-9.98E-04
+     0.45-9.98E-04
+     0.55-9.98E-04
+     0.65-9.98E-04
+     0.75-9.98E-04
+     0.85-9.98E-04
+     0.95-9.98E-04
+     1.05-9.98E-04
+     1.15-9.98E-04
+     1.25-9.98E-04
+     1.35-9.98E-04
+     1.45-9.98E-04
+Amm       
+     0.05 0.00E+00
+     0.15 0.00E+00
+     0.25 0.00E+00
+     0.35 0.00E+00
+     0.45 0.00E+00
+     0.55 0.00E+00
+     0.65 0.00E+00
+     0.75 0.00E+00
+     0.85 0.00E+00
+     0.95 0.00E+00
+     1.05 0.00E+00
+     1.15 0.00E+00
+     1.25 0.00E+00
+     1.35 0.00E+00
+     1.45 0.00E+00
+C         
+     0.05 0.00E+00
+     0.15 0.00E+00
+     0.25 0.00E+00
+     0.35 0.00E+00
+     0.45 0.00E+00
+     0.55 0.00E+00
+     0.65 0.00E+00
+     0.75 0.00E+00
+     0.85 0.00E+00
+     0.95 0.00E+00
+     1.05 0.00E+00
+     1.15 0.00E+00
+     1.25 0.00E+00
+     1.35 0.00E+00
+     1.45 0.00E+00
+N         
+     0.05 1.40E-02
+     0.15 1.40E-02
+     0.25 1.40E-02
+     0.35 1.40E-02
+     0.45 1.40E-02
+     0.55 1.40E-02
+     0.65 1.40E-02
+     0.75 1.40E-02
+     0.85 1.40E-02
+     0.95 1.40E-02
+     1.05 1.40E-02
+     1.15 1.40E-02
+     1.25 1.40E-02
+     1.35 1.40E-02
+     1.45 1.40E-02
+      DATA FOR RECHARGE PERIOD         1
+
+          LENGTH OF THIS PERIOD =   1.29600E+06 sec 
+          LENGTH OF INITIAL TIME STEP FOR THIS PERIOD =   8.64000E+03 sec 
+          MULTIPLIER FOR TIME STEP =  1.000E+00
+          MAXIMUM TIME STEP SIZE =    8.64000E+04 sec 
+          MINIMUM TIME STEP SIZE =    8.64000E+03 sec 
+          TIME STEP REDUCTION FACTOR =  0.000E+00
+               MAXIMUM PRESSURE HEAD CHANGE ALLOWED IN ONE TIME STEP =  10.000
+               STEADY-STATE CLOSURE CRITERION =  0.000E+00
+               MAXIMUM DEPTH OF PONDING =  1.000E+01
+               PRINT SOLUTION AFTER EVERY TIME STEP? F
+               SIMULATE EVAPORATION? F
+               SIMULATE EVAPOTRANSPIRATION? F
+               SIMULATE SEEPAGE FACES? F
+
+ temerature setting at the boundary
+      NODE TYPE AND INITIAL BOUNDARY CONDITIONS FOR PERIOD         1
+      LEGEND: 
+               0 = INTERIOR CELL
+               1 = SPECIFIED PRESSURE HEAD CELL
+               2 = SPECIFIED FLUX CELL
+               3 = POTENTIAL SEEPAGE FACE NODE
+               5 = NODE FOR WHICH EVAPORATION IS PERMITTED
+               7 = GRAVITY DRAIN CELL
+
+     1     000
+     2     020
+     3     000
+     4     000
+     5     000
+     6     000
+     7     000
+     8     000
+     9     000
+    10     000
+    11     000
+    12     000
+    13     000
+    14     000
+    15     000
+    16     020
+    17     000
+ TIME STEP         1  TIME =   0.864000E+04  NIT =     6  NIT1 =    21  NIT3 =     2  NIS1 =    14
+ TIME STEP         2  TIME =   0.172800E+05  NIT =     6  NIT1 =    21  NIT3 =     2  NIS1 =    14
+ TIME STEP         3  TIME =   0.259200E+05  NIT =     6  NIT1 =    21  NIT3 =     2  NIS1 =    14
+ TIME STEP         4  TIME =   0.345600E+05  NIT =     6  NIT1 =    20  NIT3 =     2  NIS1 =    14
+ TIME STEP         5  TIME =   0.432000E+05  NIT =     6  NIT1 =    20  NIT3 =     2  NIS1 =    14
+ TIME STEP         6  TIME =   0.518400E+05  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP         7  TIME =   0.604800E+05  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP         8  TIME =   0.691200E+05  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP         9  TIME =   0.777600E+05  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP        10  TIME =   0.864000E+05  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP        11  TIME =   0.950400E+05  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP        12  TIME =   0.103680E+06  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    15
+ TIME STEP        13  TIME =   0.112320E+06  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP        14  TIME =   0.120960E+06  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    14
+ TIME STEP        15  TIME =   0.129600E+06  NIT =     6  NIT1 =    19  NIT3 =     2  NIS1 =    15
+ TIME STEP        16  TIME =   0.138240E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        17  TIME =   0.146880E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        18  TIME =   0.155520E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        19  TIME =   0.164160E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        20  TIME =   0.172800E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        21  TIME =   0.181440E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        22  TIME =   0.190080E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        23  TIME =   0.198720E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        24  TIME =   0.207360E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        25  TIME =   0.216000E+06  NIT =     6  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        26  TIME =   0.224640E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        27  TIME =   0.233280E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        28  TIME =   0.241920E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        29  TIME =   0.250560E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        30  TIME =   0.259200E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        31  TIME =   0.267840E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        32  TIME =   0.276480E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        33  TIME =   0.285120E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        34  TIME =   0.293760E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        35  TIME =   0.302400E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        36  TIME =   0.311040E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        37  TIME =   0.319680E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        38  TIME =   0.328320E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        39  TIME =   0.336960E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        40  TIME =   0.345600E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        41  TIME =   0.354240E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        42  TIME =   0.362880E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        43  TIME =   0.371520E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        44  TIME =   0.380160E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        45  TIME =   0.388800E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        46  TIME =   0.397440E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        47  TIME =   0.406080E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        48  TIME =   0.414720E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        49  TIME =   0.423360E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        50  TIME =   0.432000E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        51  TIME =   0.440640E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        52  TIME =   0.449280E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        53  TIME =   0.457920E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        54  TIME =   0.466560E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        55  TIME =   0.475200E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        56  TIME =   0.483840E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        57  TIME =   0.492480E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        58  TIME =   0.501120E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        59  TIME =   0.509760E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        60  TIME =   0.518400E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        61  TIME =   0.527040E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        62  TIME =   0.535680E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        63  TIME =   0.544320E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        64  TIME =   0.552960E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        65  TIME =   0.561600E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        66  TIME =   0.570240E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        67  TIME =   0.578880E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        68  TIME =   0.587520E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        69  TIME =   0.596160E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        70  TIME =   0.604800E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        71  TIME =   0.613440E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        72  TIME =   0.622080E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        73  TIME =   0.630720E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        74  TIME =   0.639360E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        75  TIME =   0.648000E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        76  TIME =   0.656640E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        77  TIME =   0.665280E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        78  TIME =   0.673920E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        79  TIME =   0.682560E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        80  TIME =   0.691200E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        81  TIME =   0.699840E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        82  TIME =   0.708480E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        83  TIME =   0.717120E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        84  TIME =   0.725760E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        85  TIME =   0.734400E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        86  TIME =   0.743040E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        87  TIME =   0.751680E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        88  TIME =   0.760320E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        89  TIME =   0.768960E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        90  TIME =   0.777600E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        91  TIME =   0.786240E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        92  TIME =   0.794880E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        93  TIME =   0.803520E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        94  TIME =   0.812160E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        95  TIME =   0.820800E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        96  TIME =   0.829440E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        97  TIME =   0.838080E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP        98  TIME =   0.846720E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP        99  TIME =   0.855360E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       100  TIME =   0.864000E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP       101  TIME =   0.872640E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       102  TIME =   0.881280E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP       103  TIME =   0.889920E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       104  TIME =   0.898560E+06  NIT =     5  NIT1 =    18  NIT3 =     2  NIS1 =    15
+ TIME STEP       105  TIME =   0.907200E+06  NIT =     6  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       106  TIME =   0.915840E+06  NIT =     6  NIT1 =    16  NIT3 =     2  NIS1 =    15
+ TIME STEP       107  TIME =   0.924480E+06  NIT =     6  NIT1 =    16  NIT3 =     2  NIS1 =    15
+ TIME STEP       108  TIME =   0.933120E+06  NIT =     6  NIT1 =    16  NIT3 =     2  NIS1 =    15
+ TIME STEP       109  TIME =   0.941760E+06  NIT =     6  NIT1 =    16  NIT3 =     2  NIS1 =    15
+ TIME STEP       110  TIME =   0.950400E+06  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       111  TIME =   0.959040E+06  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       112  TIME =   0.967680E+06  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       113  TIME =   0.976320E+06  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       114  TIME =   0.984960E+06  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       115  TIME =   0.993600E+06  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       116  TIME =   0.100224E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       117  TIME =   0.101088E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       118  TIME =   0.101952E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       119  TIME =   0.102816E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       120  TIME =   0.103680E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       121  TIME =   0.104544E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       122  TIME =   0.105408E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       123  TIME =   0.106272E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       124  TIME =   0.107136E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       125  TIME =   0.108000E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       126  TIME =   0.108864E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       127  TIME =   0.109728E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       128  TIME =   0.110592E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       129  TIME =   0.111456E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       130  TIME =   0.112320E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       131  TIME =   0.113184E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       132  TIME =   0.114048E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       133  TIME =   0.114912E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       134  TIME =   0.115776E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       135  TIME =   0.116640E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       136  TIME =   0.117504E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       137  TIME =   0.118368E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       138  TIME =   0.119232E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       139  TIME =   0.120096E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       140  TIME =   0.120960E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       141  TIME =   0.121824E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       142  TIME =   0.122688E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       143  TIME =   0.123552E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       144  TIME =   0.124416E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       145  TIME =   0.125280E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       146  TIME =   0.126144E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       147  TIME =   0.127008E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       148  TIME =   0.127872E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       149  TIME =   0.128736E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+ TIME STEP       150  TIME =   0.129600E+07  NIT =     5  NIT1 =    17  NIT3 =     2  NIS1 =    15
+                                                                                      
+     TOTAL ELAPSED TIME =  1.296000E+06 sec 
+     TIME STEP       150
+
+
+                                                   PRESSURE HEAD
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+                0.500
+     0.050  9.365E-01
+     0.150  9.466E-01
+     0.250  9.565E-01
+     0.350  9.662E-01
+     0.450  9.756E-01
+     0.550  9.848E-01
+     0.650  9.937E-01
+     0.750  1.002E+00
+     0.850  1.011E+00
+     0.950  1.019E+00
+     1.050  1.027E+00
+     1.150  1.034E+00
+     1.250  1.042E+00
+     1.350  1.049E+00
+     1.450  1.056E+00
+                                                   Z-VELOCITY
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+                0.500
+     0.050  0.000E+00
+     0.150  1.160E-06
+     0.250  1.160E-06
+     0.350  1.160E-06
+     0.450  1.160E-06
+     0.550  1.160E-06
+     0.650  1.160E-06
+     0.750  1.160E-06
+     0.850  1.160E-06
+     0.950  1.160E-06
+     1.050  1.160E-06
+     1.150  1.160E-06
+     1.250  1.160E-06
+     1.350  1.160E-06
+     1.450  1.160E-06
+                                                   TEMPERATURE
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+                0.500
+     0.050    24.5568
+     0.150    24.4630
+     0.250    24.3607
+     0.350    24.2505
+     0.450    24.1333
+     0.550    24.0103
+     0.650    23.8831
+     0.750    23.7538
+     0.850    23.6248
+     0.950    23.4994
+     1.050    23.3812
+     1.150    23.2746
+     1.250    23.1847
+     1.350    23.1176
+     1.450    23.0802
+                                                   CONCENTRATION
+  Z, IN
+  m                       X OR R DISTANCE, IN m   
+              0.50
+H2O       
+     0.05 9.97E+05
+     0.15 9.97E+05
+     0.25 9.97E+05
+     0.35 9.97E+05
+     0.45 9.97E+05
+     0.55 9.97E+05
+     0.65 9.97E+05
+     0.75 9.97E+05
+     0.85 9.97E+05
+     0.95 9.97E+05
+     1.05 9.97E+05
+     1.15 9.97E+05
+     1.25 9.97E+05
+     1.35 9.97E+05
+     1.45 9.97E+05
+H         
+     0.05 1.21E-02
+     0.15 1.26E-02
+     0.25 1.37E-02
+     0.35 1.46E-02
+     0.45 1.54E-02
+     0.55 1.61E-02
+     0.65 1.66E-02
+     0.75 1.71E-02
+     0.85 1.74E-02
+     0.95 1.77E-02
+     1.05 1.79E-02
+     1.15 1.80E-02
+     1.25 1.81E-02
+     1.35 1.81E-02
+     1.45 1.82E-02
+O         
+     0.05 8.15E+00
+     0.15 8.12E+00
+     0.25 8.11E+00
+     0.35 8.11E+00
+     0.45 8.10E+00
+     0.55 8.11E+00
+     0.65 8.11E+00
+     0.75 8.12E+00
+     0.85 8.13E+00
+     0.95 8.14E+00
+     1.05 8.15E+00
+     1.15 8.17E+00
+     1.25 8.18E+00
+     1.35 8.20E+00
+     1.45 8.21E+00
+Charge    
+     0.05-2.52E-06
+     0.15-4.25E-06
+     0.25-7.37E-06
+     0.35-1.27E-05
+     0.45-2.11E-05
+     0.55-3.37E-05
+     0.65-5.20E-05
+     0.75-7.70E-05
+     0.85-1.10E-04
+     0.95-1.51E-04
+     1.05-2.01E-04
+     1.15-2.59E-04
+     1.25-3.22E-04
+     1.35-3.85E-04
+     1.45-4.35E-04
+Amm       
+     0.05 8.36E-02
+     0.15 5.13E-02
+     0.25 3.61E-02
+     0.35 2.65E-02
+     0.45 2.02E-02
+     0.55 1.59E-02
+     0.65 1.29E-02
+     0.75 1.07E-02
+     0.85 9.06E-03
+     0.95 7.79E-03
+     1.05 6.80E-03
+     1.15 6.00E-03
+     1.25 5.35E-03
+     1.35 4.82E-03
+     1.45 4.46E-03
+C         
+     0.05 3.84E-01
+     0.15 6.06E-01
+     0.25 8.07E-01
+     0.35 9.89E-01
+     0.45 1.15E+00
+     0.55 1.31E+00
+     0.65 1.44E+00
+     0.75 1.57E+00
+     0.85 1.68E+00
+     0.95 1.78E+00
+     1.05 1.87E+00
+     1.15 1.96E+00
+     1.25 2.03E+00
+     1.35 2.09E+00
+     1.45 2.13E+00
+N         
+     0.05 5.74E-02
+     0.15 7.78E-02
+     0.25 9.00E-02
+     0.35 9.73E-02
+     0.45 1.02E-01
+     0.55 1.04E-01
+     0.65 1.04E-01
+     0.75 1.03E-01
+     0.85 1.01E-01
+     0.95 9.77E-02
+     1.05 9.32E-02
+     1.15 8.76E-02
+     1.25 8.13E-02
+     1.35 7.50E-02
+     1.45 7.00E-02
+                     ---------- MASS BALANCE SUMMARY FOR TIME STEP      150 ----------
+                         RECHARGE PERIOD NUMBER         1
+                         TOTAL ELAPSED SIMULATION TIME =   1.296000E+06 sec 
+
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  +                                                                                                                              +
+  +                                                                                           TOTAL THIS          RATE THIS      +
+  +                                 VOLUMETRIC FLOW BALANCE                  TOTAL            TIME STEP            TIME STEP     +
+  +                                                                        m   **3             m   **3           m   **3/sec     +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      1.50336E+00         1.00224E-02         1.16000E-06    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -1.50336E+00        -1.00224E-02        -1.16000E-06    +
+  +                                        TOTAL FLUX INTO DOMAIN --      1.50336E+00         1.00224E-02         1.16000E-06    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -1.50336E+00        -1.00224E-02        -1.16000E-06    +
+  +                                                   EVAPORATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                                 TRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                    FLUID FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                              CHANGE IN FLUID STORED IN DOMAIN --      4.58014E-15         2.18109E-17         2.52441E-21    +
+  +                                          FLUID VOLUME BALANCE --     -4.57273E-15        -2.25514E-17        -2.61012E-21    +
+  +                                                                                                                              +
+  +                                                                                                                              +
+  +                                   ENERGY MASS BALANCE                                                                        +
+  +                                                                          j                   j                 j   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      1.57101E+08         1.04734E+06         1.21220E+02    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -1.33453E+08        -9.66499E+05        -1.11863E+02    +
+  +                                   CONDUCTIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                 CONDUCTIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      1.57101E+08         1.04734E+06         1.21220E+02    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -1.33453E+08        -9.66499E+05        -1.11863E+02    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                   ENERGY FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN ENERGY STORED IN DOMAIN --      2.36479E+07         8.08415E+04         9.35666E+00    +
+  +                                           ENERGY MASS BALANCE --      1.56534E-01         6.94475E-04         8.03791E-08    +
+  +                                                                                                                              +
+H2O       
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      1.49890E+06         9.99269E+03         1.15656E+00    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -1.49891E+06        -9.99274E+03        -1.15657E+00    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      1.49890E+06         9.99269E+03         1.15656E+00    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -1.49891E+06        -9.99274E+03        -1.15657E+00    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      6.37220E+00         3.36069E-02         3.88969E-06    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --     -1.73468E+00        -2.31724E-02        -2.68199E-06    +
+  +                                           SOLUTE MASS BALANCE --     -1.75751E-02        -6.12334E-05        -7.08720E-09    +
+  +                                                                                                                              +
+H         
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      3.04128E-04         2.02752E-06         2.34667E-10    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -2.04782E-02        -1.82142E-04        -2.10812E-08    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      3.04128E-04         2.02752E-06         2.34667E-10    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -2.04782E-02        -1.82142E-04        -2.10812E-08    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      4.41869E-02         1.97924E-04         2.29079E-08    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      2.41112E-02         1.79746E-05         2.08040E-09    +
+  +                                           SOLUTE MASS BALANCE --     -9.83779E-05        -1.64856E-07        -1.90806E-11    +
+  +                                                                                                                              +
+O         
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      1.22622E+01         8.17482E-02         9.46159E-06    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -1.24458E+01        -8.22993E-02        -9.52538E-06    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      1.22622E+01         8.17482E-02         9.46159E-06    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -1.24458E+01        -8.22993E-02        -9.52538E-06    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      8.72056E-02        -4.30324E-04        -4.98060E-08    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --     -9.56009E-02        -9.80503E-04        -1.13484E-07    +
+  +                                           SOLUTE MASS BALANCE --     -7.62330E-04        -9.61644E-07        -1.11301E-10    +
+  +                                                                                                                              +
+Charge    
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -1.82247E-06        -1.21498E-08        -1.40623E-12    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      1.29172E-03         4.39800E-06         5.09028E-10    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --     -1.82247E-06        -1.21498E-08        -1.40623E-12    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --      1.29172E-03         4.39800E-06         5.09028E-10    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --     -4.19266E-11        -5.14421E-14        -5.95395E-18    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      1.28987E-03         4.38560E-06         5.07593E-10    +
+  +                                           SOLUTE MASS BALANCE --      3.30452E-08         2.48495E-10         2.87610E-14    +
+  +                                                                                                                              +
+Amm       
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -2.87582E-03        -4.46314E-05        -5.16567E-09    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -2.87582E-03        -4.46314E-05        -5.16567E-09    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      3.30270E-02         4.69606E-05         5.43526E-09    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      3.01381E-02         2.08382E-06         2.41183E-10    +
+  +                                           SOLUTE MASS BALANCE --      1.30558E-05         2.45440E-07         2.84074E-11    +
+  +                                                                                                                              +
+C         
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -2.14681E+00        -2.13444E-02        -2.47042E-06    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -2.14681E+00        -2.13444E-02        -2.47042E-06    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      4.31374E+00         2.20824E-02         2.55583E-06    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      2.17923E+00         7.79477E-04         9.02172E-08    +
+  +                                           SOLUTE MASS BALANCE --     -1.22894E-02        -4.15456E-05        -4.80852E-09    +
+  +                                                                                                                              +
+N         
+  +                                                                                                                              +
+  +                                   SOLUTE MASS BALANCE                                                                        +
+  +                                                                          g                   g                 g   /sec      +
+  +    FLUX INTO DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --     -4.05909E-02        -6.97210E-04        -8.06956E-08    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                        TOTAL FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                                      TOTAL FLUX OUT OF DOMAIN --     -4.05909E-02        -6.97210E-04        -8.06956E-08    +
+  +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      1.53776E-01         1.16790E-03         1.35173E-07    +
+  +                                   SOLUTE FROM BOUNDARY CHANGE --      0.00000E+00         0.00000E+00         0.00000E+00    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      1.13196E-01         4.70890E-04         5.45011E-08    +
+  +                                           SOLUTE MASS BALANCE --     -1.07602E-05        -2.02278E-07        -2.34119E-11    +
+  +                                                                                                                              +
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
