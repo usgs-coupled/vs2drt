@@ -16,7 +16,7 @@ RATES
 15 T_C = TC
 20 o2_half = 1.5e-5          # mol/kgw
 30 o2_monod = TOT("O(0)")/(TOT("O(0)") + o2_half)       #acceptor
-60 rate = k * EXP(k_tmp * T_C) * TOT("Doc") * o2_monod
+60 rate = k * EXP(k_tmp * T_C) * TOT("Doc") * o2_monod * TOT("Doc") / (TOT("Doc") + 1e-7)
 70 moles = rate * TIME * TOT("water")
 80 SAVE moles
 #90 print moles, TOT("Amm"), k, TIME
@@ -31,7 +31,7 @@ RATES
 30 o2_monod = TOT("O(0)")/(TOT("O(0)") + o2_half)
 40 amm_half = 2e-7 # mol/kgw
 50 amm_monod = TOT("Amm")/(TOT("Amm") + amm_half)
-60 rate = k * EXP(k_tmp * T_C) * TOT("Amm") * o2_monod    #* amm_monod
+60 rate = k * EXP(k_tmp * T_C) * TOT("Amm") * o2_monod * amm_monod
 70 moles = rate * TIME * TOT("water")
 80 SAVE moles
 #90 print moles, TOT("Amm"), k, TIME
@@ -44,7 +44,8 @@ RATES
 15 T_C = TC
 20 o2_half = 6.25e-5         # mol/kgw
 30 o2_inhib = TOT("O(0)")/(TOT("O(0)") + o2_half)
-60 rate = k * EXP(k_tmp * T_C) * TOT("N(5)") * (1 - o2_inhib)
+50 N_monod = TOT("N(5)")/(TOT("N(5)") + 1e-7)
+60 rate = k * EXP(k_tmp * T_C) * TOT("N(5)") * (1 - o2_inhib) * N_monod
 70 SAVE rate * TIME
 -end
 
@@ -66,7 +67,7 @@ Denitrification
     -m        10
     -m0       10
     -tol      1e-008
--cvode
+#-cvode
 -step_divide 1
 -runge_kutta 3
 -bad_step_max 500
@@ -90,6 +91,10 @@ Denitrification
     -m        10
     -m0       10
     -tol      1e-008
+#-cvode
+-step_divide 1
+-runge_kutta 3
+-bad_step_max 500
 END
 
 SOLUTION 0
