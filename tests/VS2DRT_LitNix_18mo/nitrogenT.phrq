@@ -1,4 +1,4 @@
-DATABASE C:\Program Files (x86)\USGS\Phreeqc Interactive 3.1.7-9213\database\Amm.dat
+#DATABASE C:\Program Files (x86)\USGS\Phreeqc Interactive 3.1.7-9213\database\Amm.dat
 SOLUTION_MASTER_SPECIES
     Doc         Doc          0     C      12   
 
@@ -148,7 +148,8 @@ USER_GRAPH
  -end
 
 END
-
+PRINT
+-reset false
 
 
 
