@@ -119,33 +119,33 @@ SOLUTION 1-15
     -water    1 # kg
 END
 
-SELECTED_OUTPUT
-	-reset false
-	-totals Amm N(5) N Ntg Doc   #!
-	-molalities O2               #!
-USER_PUNCH
--heading O2_mgL DOC_mgL              #!
-10 PUNCH 1000*16*TOT("O(0)")         #! simpler
-20 PUNCH 1000*12*TOT("Doc")          #!
-END
+#SELECTED_OUTPUT
+#	-reset false
+#	-totals Amm N(5) N Ntg Doc   #!
+#	-molalities O2               #!
+#USER_PUNCH
+#-heading O2_mgL DOC_mgL              #!
+#10 PUNCH 1000*16*TOT("O(0)")         #! simpler
+#20 PUNCH 1000*12*TOT("Doc")          #!
+#END
 
-USER_GRAPH
- -axis_scale sy  -0 15
- -headings Distance Amm Nitrate Dissolved_N2 DOC DO  #!
- -initial_solutions
- -axis_scale sy_axis  0  10
- -connect_simulations false
- -plot_concentration_vs X
- -axis_titles "Depth" "mol/kgw" "DO, mg/kgw"
- -start
- 10 graph_x dist
- 20 graph_y TOT("Amm")
- 40 graph_y TOT("N(5)")
- 50 graph_y TOT("Ntg")                             #!
- 60 graph_y TOT("Doc")                             #!
- 70 graph_sy 1000*16*TOT("O(0)")                   #!
-
- -end
+#USER_GRAPH
+# -axis_scale sy  -0 15
+# -headings Distance Amm Nitrate Dissolved_N2 DOC DO  #!
+# -initial_solutions
+# -axis_scale sy_axis  0  10
+# -connect_simulations false
+# -plot_concentration_vs X
+# -axis_titles "Depth" "mol/kgw" "DO, mg/kgw"
+# -start
+# 10 graph_x dist
+# 20 graph_y TOT("Amm")
+# 40 graph_y TOT("N(5)")
+# 50 graph_y TOT("Ntg")                             #!
+# 60 graph_y TOT("Doc")                             #!
+# 70 graph_sy 1000*16*TOT("O(0)")                   #!
+#
+# -end
 
 END
 PRINT
