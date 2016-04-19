@@ -31,7 +31,7 @@ T     /B4 -- PHRD
 1 1     /B5A -- hydraulicFunctionType, adsorptionType
 1     /B6 -- ITEX. B7 to begin next line: HK
 1.0 0.0 0.0 1.0 0.0 0.0 0.0  / Porosity must be set to 1. ***
-0.0 0.0 0.0 1 -1 1 -1 -1 -1 -1      /B7A -- HT
+0.0 0.0 0.0 -1 -1 -1 -1 -1 -1 -1      /B7A -- HT
 2     /B6 -- ITEX. B7 to begin next line: HK
 1.0 2.778E-6 1.0E-6 1.0 0.00505 0.17 7.0
 0.002 0.002 0.0 1 -1 1 -1 -1 -1 -1      /B7A -- HT
