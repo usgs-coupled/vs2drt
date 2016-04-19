@@ -31,10 +31,10 @@ T     /B4 -- PHRD
 1 1     /B5A -- hydraulicFunctionType, adsorptionType
 1     /B6 -- ITEX. B7 to begin next line: HK
 1.0 0.0 0.0 1.0 0.0 0.0 0.0  / Porosity must be set to 1. ***
-0.0 0.0 0.0 0.0 0.0 0     /B7A -- HT
+0.0 0.0 0.0 1 -1 1 -1 -1 -1 -1      /B7A -- HT
 2     /B6 -- ITEX. B7 to begin next line: HK
 1.0 2.778E-6 1.0E-6 1.0 0.00505 0.17 7.0
-0.002 0.002 0.0 0.0 0.0 0     /B7A -- HT
+0.002 0.002 0.0 1 -1 1 -1 -1 -1 -1      /B7A -- HT
 0     /B8 -- IROW. B9 begins next line: JTEX
 1 1 1 
 1 2 1
@@ -80,8 +80,6 @@ T     /B4 -- PHRD
 1 1 1 
 0 1.0     /B11 -- IREAD, FACTOR
 F F      /B14 -- BCIT, ETSIM
-0     /B28 -- IREAD 
-1 -1 1 -1 -1 -1 -1   /B29 INSOL ***
 72000.0 720.0     /C1 -- TPER, DELT (Recharge Period 1)
 1.0 720.0 720.0 0.0     /C2 -- TMLT, DLTMX, DLTMIN, TRED
 10.0 0.0     /C3 -- DSMAX, STERR
