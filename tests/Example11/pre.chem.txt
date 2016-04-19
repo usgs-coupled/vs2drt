@@ -36,7 +36,7 @@ Initial solution 0.	CaCl2
                                        pH  =   6.730      Charge balance
                                        pe  =  13.904      Equilibrium with O2(g)
                         Activity of water  =   0.967
-                           Ionic strength  =  1.928e+000
+                 Ionic strength (mol/kgw)  =  1.928e+000
                        Mass of water (kg)  =  1.000e+000
                  Total alkalinity (eq/kg)  = -1.901e-016
                     Total carbon (mol/kg)  =  0.000e+000
@@ -92,7 +92,7 @@ Initial solution 1.	Initial solution for column
                                        pH  =   6.905      Charge balance
                                        pe  =  13.731      Equilibrium with O2(g)
                         Activity of water  =   0.957
-                           Ionic strength  =  1.260e+000
+                 Ionic strength (mol/kgw)  =  1.260e+000
                        Mass of water (kg)  =  1.000e+000
                  Total alkalinity (eq/kg)  =  1.060e-016
                     Total carbon (mol/kg)  =  0.000e+000
@@ -171,6 +171,6 @@ Reading input data for simulation 3.
 ------------------------------------
 
 -------------------------------
-End of Run after 0.035 Seconds.
+End of Run after 0.166 Seconds.
 -------------------------------
 
