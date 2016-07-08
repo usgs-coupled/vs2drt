@@ -8162,6 +8162,7 @@
       use trxv
       use temp
       use pit
+      use ptet
       use tempcc
       use react
       IMPLICIT DOUBLE PRECISION (A-H,P-Z)
