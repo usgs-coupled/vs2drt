@@ -158,7 +158,8 @@
       end module TEMPCC
 
       module COORDIN
-      double precision, allocatable:: XNODE(:),ZNODE(:)
+      !double precision, allocatable:: XNODE(:),ZNODE(:)
+      integer, allocatable:: XNODE(:),ZNODE(:)
       end module COORDIN
 
       module SOLINDEX

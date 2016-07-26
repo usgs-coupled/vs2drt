@@ -604,8 +604,10 @@
       phreeC(I)=0.d0
   8   continue
       DO 711 I=1, NNODES
-      XNODE(I)= 0.0D0
-      ZNODE(I)= 0.0D0  
+      !XNODE(I)= 0.0D0
+      !ZNODE(I)= 0.0D0  
+      XNODE(I)= 0
+      ZNODE(I)= 0
       HX(I) = 0.0D0
       NTYP(I) = 0
       THETA(I) = 0.0D0
@@ -2411,7 +2413,8 @@
               status = RM_RunCells(rm_id)
               call GetConcentrationsRM(cc)
               !call FH_WriteFiles(rm_id, ihdf, imedia, ixyz, nprchxz, iprrestartflag) 
-              call FH_SetPointers(xnode(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
+              !call FH_SetPointers(xnode(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
+              call FH_SetPointers(RX(1), DZZ(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
               call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
           END IF
       END IF

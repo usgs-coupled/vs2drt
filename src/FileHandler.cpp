@@ -69,12 +69,12 @@ public:
 	std::vector< std::ostream * > &GetXYZOstreams(void) {return this->XYZOstreams;}
 	std::vector< std::string > &GetHeadings(void) {return this->Headings;}
 	void SetHeadings(std::vector< std::string > &h) {this->Headings = h;}
-	void SetPointers(double *x_node, double *y_node, double *z_node, int *ic, double *saturation = NULL, int *mapping = NULL);
+	void SetPointers(double *x_node, double *z_node, int * x_index, int * z_index, int *ic, double *saturation = NULL, int *mapping = NULL);
 	IRM_RESULT SetRestartName(const char *name, long nchar);
 	IRM_RESULT WriteRestartFile(int *id, int *print_restart = NULL, int *indices_ic = NULL);
 	IRM_RESULT WriteFiles(int id, int *print_hdf = NULL, int *print_media = NULL, int *print_xyz = NULL, int *xyz_mask = NULL, int *print_restart = NULL);
 	//IRM_RESULT WriteHDF(int id, int *print_hdf, int *print_media);
-	IRM_RESULT WriteRestart(int id, int *print_restart);
+	//IRM_RESULT WriteRestart(int id, int *print_restart);
 	IRM_RESULT WriteXYZ(int id, int *print_xyz, int *xyz_mask);
     //IRM_RESULT WriteBcRaw(int *id, double *c, int *solution_list, int * bc_solution_count, int * solution_number, char *prefix, int prefix_l);
 
@@ -86,8 +86,9 @@ protected:
 	std::vector < std::ostream * > XYZOstreams;	
 	std::map < std::string, int > RestartFileMap; 
 	double * x_node;
-	double * y_node;
 	double * z_node;
+	int * x_index;
+	int * z_index;
 	double * saturation;  // only root
 	int    * mapping;     // only root
 	int    * ic;
@@ -420,19 +421,21 @@ FileHandler::ProcessRestartFiles(
 #endif
 /* ---------------------------------------------------------------------- */
 void
-FileHandler::SetPointers(double *x_node_in, double *y_node_in, double *z_node_in, int *ic_in,
+FileHandler::SetPointers(double *x_node_in, double *z_node_in, int * x_index_in, int * z_index_in, int *ic_in,
 	double * saturation_in, int *mapping_in)
 /* ---------------------------------------------------------------------- */
 {
 	this->x_node = x_node_in;
-	this->y_node = y_node_in;
 	this->z_node = z_node_in;
+	x_index = x_index_in;
+	z_index = z_index_in;
 	this->saturation = saturation_in;
 	this->mapping = mapping_in;  // only root
 	this->ic = ic_in;
 	if (this->x_node == NULL ||
-		this->y_node == NULL ||
 		this->z_node == NULL ||
+		x_index == NULL ||
+		z_index == NULL ||
 		this->ic == NULL)
 	{
 		error_msg("NULL pointer in FileHandler.SetPointers ", 1);
@@ -488,11 +491,11 @@ FileHandler::WriteFiles(int id, int *print_hdf_in, int *print_media_in, int *pri
 			IRM_RESULT result = WriteXYZ(id, &print_xyz, xyz_mask);
 			if (result) rtn = result;
 		}		
-		if (print_restart != 0)
-		{
-			IRM_RESULT result = WriteRestart(id, &print_restart);
-			if (result) rtn = result;
-		}	
+		//if (print_restart != 0)
+		//{
+		//	IRM_RESULT result = WriteRestart(id, &print_restart);
+		//	if (result) rtn = result;
+		//}	
 
 		return rtn;
 	}
@@ -698,6 +701,7 @@ FileHandler::WriteHDF(int id, int *print_hdf, int *print_media)
 	return IRM_BADINSTANCE;
 }
 #endif
+#ifdef SKIP
 /* ---------------------------------------------------------------------- */
 IRM_RESULT
 FileHandler::WriteRestart(int id, int *print_restart)
@@ -793,6 +797,7 @@ FileHandler::WriteRestart(int id, int *print_restart)
 	}
 	return IRM_BADINSTANCE;
 }
+#endif
 /* ---------------------------------------------------------------------- */
 IRM_RESULT
 FileHandler::WriteXYZ(int id, int *print_xyz, int *xyz_mask)
@@ -832,8 +837,13 @@ FileHandler::WriteXYZ(int id, int *print_xyz, int *xyz_mask)
 						char line_buff[132];
 						//sprintf(line_buff, "%15s\t%15s\t%15s\t%15s\t%2s\t", "x", "y",
 						//	"z", "time", "in");
-						sprintf(line_buff, "%15s\t%15s\t%15s\t%2s\t", "x", 
-							"z", "time", "in");
+						//sprintf(line_buff, "%15s\t%15s\t%15s\t%2s\t", "x", 
+						//	"z", "time", "in");
+						sprintf(line_buff, "%15s\t%15s\t%15s\t%15s\t", 
+							"TIME",
+							"NODE",
+							"XR", 
+							"Z");
 						this->Get_io()->punch_msg(line_buff);
 
 						// create chemistry headings
@@ -882,12 +892,12 @@ FileHandler::WriteXYZ(int id, int *print_xyz, int *xyz_mask)
 							PhreeqcRM * Reaction_module_ptr = PhreeqcRM::GetInstance(id);
 							int irow = Reaction_module_ptr->GetBackwardMapping()[ichem][0];
 #else
-						for (int irow = 0; irow < nxyz; irow++)
+						for (int icell = 0; icell < nxyz; icell++)
 						{
 #endif
-							if (xyz_mask[irow] <= 0) continue;
+							if (xyz_mask[icell] <= 0) continue;
 							int active = 1;
-							if (mapping[irow] < 0 || saturation[irow] <= 0)
+							if (mapping[icell] < 0 || saturation[icell] <= 0)
 							{
 								active = 0;
 							}
@@ -899,9 +909,15 @@ FileHandler::WriteXYZ(int id, int *print_xyz, int *xyz_mask)
 							//sprintf(line_buff, "%15g\t%15g\t%15g\t%15g\t%2d\t",
 							//	x_node[irow], y_node[irow], z_node[irow], current_time,
 							//	active);
-							sprintf(line_buff, "%15g\t%15g\t%15g\t%2d\t",
-								x_node[irow], z_node[irow], current_time,
-								active);
+							//sprintf(line_buff, "%15g\t%15g\t%15g\t%2d\t",
+							//	x_node[irow], z_node[irow], current_time,
+							//	active);
+
+							sprintf(line_buff, "%15g\t%15d\t%15g\t%15g\t",
+								current_time,
+								icell + 1,
+								x_node[x_index[icell] - 1], 
+								z_node[z_index[icell] - 1]);
 							ln << line_buff;
 
 							if (active)
@@ -910,7 +926,7 @@ FileHandler::WriteXYZ(int id, int *print_xyz, int *xyz_mask)
 								char token[21];
 								for (int jcol = 0; jcol < ncol; jcol++)
 								{		
-									sprintf(token,"%19.10e\t", local_selected_out[jcol * nxyz + irow]);
+									sprintf(token,"%19.10e\t", local_selected_out[jcol * nxyz + icell]);
 									ln.width(20);
 									ln << token;
 								}
@@ -969,10 +985,10 @@ FH_ProcessRestartFiles(
 #endif
 /* ---------------------------------------------------------------------- */
 void
-FH_SetPointers(double *x_node, double *y_node, double *z_node, int *ic, double *saturation, int *mapping)
+FH_SetPointers(double *x_node, double *z_node, int *x_index, int *z_index, int *ic, double *saturation, int *mapping)
 /* ---------------------------------------------------------------------- */
 {
-	file_handler.SetPointers(x_node, y_node, z_node, ic, saturation, mapping);
+	file_handler.SetPointers(x_node, z_node, x_index, z_index, ic, saturation, mapping);
 }
 /* ---------------------------------------------------------------------- */
 void
