@@ -8,7 +8,26 @@ Module vs2dt_rm
     integer, dimension(:), allocatable :: forward1
     logical :: solute_rm
     logical :: RM_OK = .TRUE. 
-    
+ 
+         !     call FH_SetPointers(xnode(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
+        INTERFACE
+            SUBROUTINE FH_SetPointers(x, x1, z, ic1_reordered, theta, forward1) &
+                BIND(C, NAME='FH_SetPointers')
+                USE ISO_C_BINDING
+                IMPLICIT NONE
+                REAL(KIND=C_DOUBLE), INTENT(in) :: x, x1, z, theta
+                INTEGER(KIND=C_INT), INTENT(in) :: ic1_reordered, forward1
+            END SUBROUTINE FH_SetPointers
+        !       call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
+                
+            SUBROUTINE FH_WriteFiles(rm_id, i1, i2, i3, nprchxz, iprrestartflag) &
+                BIND(C, NAME='FH_WriteFiles')
+                USE ISO_C_BINDING
+                IMPLICIT NONE
+                INTEGER(KIND=C_INT), INTENT(in) :: rm_id, i1, i2, i3, nprchxz, iprrestartflag
+            END SUBROUTINE FH_WriteFiles
+        END INTERFACE  
+        
     CONTAINS  
     
     SUBROUTINE CreateRM(solute, nnodes,  prefix, databasefile, chemfile, nsol)

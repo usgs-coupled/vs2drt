@@ -80,13 +80,13 @@ Na
 
           ANISOTROPY       KSAT     SPECIFIC    POROSITY
                                     STORAGE
-            ALPHAL        ALPHAT      DM
+            ALPHAL        ALPHAT      DM        SOLUTION    EQ_PHASE    EXCHANGE    SURFACE     GAS_PHAS    SOLID_SO    KINETICS
  CLASS # 1
             1.000D+00   0.000D+00   0.000D+00   1.000D+00   0.000D+00   0.000D+00   0.000D+00
-            0.000D+00   0.000D+00   0.000D+00  -1  -1  -1  -1  -1  -1  -1
+            0.000D+00   0.000D+00   0.000D+00  -1          -1          -1          -1          -1          -1          -1
  CLASS # 2
             1.000D+00   2.778D-06   1.000D-06   1.000D+00   5.050D-03   1.700D-01   7.000D+00
-            2.000D-03   2.000D-03   0.000D+00   1  -1   1  -1  -1  -1  -1
+            2.000D-03   2.000D-03   0.000D+00   1          -1           1          -1          -1          -1          -1
       TEXTURAL CLASS INDEX MAP
 
 
@@ -134,7 +134,6 @@ Na
          41  121
          42  111
      INITIAL PRESSURE HEAD OR MOISTURE CONTENT WAS SET TO A CONSTANT VALUE OF   1.000E+00
-     INITIAL PRESSURE HEAD OR MOISTURE CONTENT WAS READ FROM UNIT  101 A SCALING FACTOR OF   1.000E+00 WAS USED
     H2O         0.000000
     H           0.000000
     O           0.000000
@@ -1230,15 +1229,15 @@ H2O
   +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --     -1.99425E+05        -1.99425E+03        -2.76979E+00    +
   +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      2.24548E-09         3.46945E-11         4.81869E-14    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      2.22557E-09         3.43453E-11         4.77018E-14    +
   +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -5.90697E-05         0.00000E+00         0.00000E+00    +
   +                                        TOTAL FLUX INTO DOMAIN --      1.99425E+05         1.99425E+03         2.76979E+00    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -1.99425E+05        -1.99425E+03        -2.76979E+00    +
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --     -4.94671E-05        -7.86390E-08        -1.09221E-10    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --     -4.94671E-05        -7.86402E-08        -1.09222E-10    +
   +                                   SOLUTE FROM BOUNDARY CHANGE --      2.21236E-09         0.00000E+00         0.00000E+00    +
-  +                             CHANGE IN SOLUTE STORED IN DOMAIN --     -4.57061E-03        -8.31690E-08        -1.15512E-10    +
-  +                                           SOLUTE MASS BALANCE --     -4.29913E-04         2.04703E-09         2.84310E-12    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --     -4.57061E-03        -8.31671E-08        -1.15510E-10    +
+  +                                           SOLUTE MASS BALANCE --     -4.29913E-04         2.04287E-09         2.83732E-12    +
   +                                                                                                                              +
 H         
   +                                                                                                                              +
@@ -1249,14 +1248,14 @@ H
   +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      1.51047E-07         0.00000E+00         0.00000E+00    +
-  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -1.60398E-10        -2.29211E-12        -3.18349E-15    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -1.61207E-10        -2.30644E-12        -3.20338E-15    +
   +                                        TOTAL FLUX INTO DOMAIN --      1.03097E-04         1.02946E-06         1.42981E-09    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -9.05266E-05        -1.03456E-06        -1.43688E-09    +
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      5.56067E-06         1.10078E-08         1.52887E-11    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      5.56067E-06         1.10078E-08         1.52886E-11    +
   +                                   SOLUTE FROM BOUNDARY CHANGE --     -2.53186E-10         0.00000E+00         0.00000E+00    +
-  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      1.38497E-05         7.89672E-09         1.09677E-11    +
-  +                                           SOLUTE MASS BALANCE --      4.28139E-06        -1.98365E-09        -2.75508E-12    +
+  +                             CHANGE IN SOLUTE STORED IN DOMAIN --      1.38497E-05         7.89666E-09         1.09676E-11    +
+  +                                           SOLUTE MASS BALANCE --      4.28139E-06        -1.98367E-09        -2.75509E-12    +
   +                                                                                                                              +
 O         
   +                                                                                                                              +
@@ -1266,15 +1265,15 @@ O
   +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --     -4.64435E+03        -1.11904E-02        -1.55422E-05    +
   +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      2.58829E-10         2.05221E-11         2.85029E-14    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      2.57010E-10         2.04084E-11         2.83450E-14    +
   +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -6.03020E+01         0.00000E+00         0.00000E+00    +
   +                                        TOTAL FLUX INTO DOMAIN --      1.09661E+00         1.09661E-02         1.52307E-05    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -4.70465E+03        -1.11904E-02        -1.55422E-05    +
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      4.87960E-05         9.99539E-08         1.38825E-10    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      4.87960E-05         9.99538E-08         1.38825E-10    +
   +                                   SOLUTE FROM BOUNDARY CHANGE --     -1.23295E-08         0.00000E+00         0.00000E+00    +
   +                             CHANGE IN SOLUTE STORED IN DOMAIN --     -4.70356E+03        -2.21075E-04        -3.07048E-07    +
-  +                                           SOLUTE MASS BALANCE --     -4.62074E-04        -3.10562E-06        -4.31336E-09    +
+  +                                           SOLUTE MASS BALANCE --     -4.62074E-04        -3.10562E-06        -4.31337E-09    +
   +                                                                                                                              +
 Charge    
   +                                                                                                                              +
@@ -1302,7 +1301,7 @@ Ca
   +  FLUX OUT OF DOMAIN ACROSS SPECIFIED PRESSURE HEAD BOUNDARIES --     -3.15559E+03        -5.13349E+01        -7.12985E-02    +
   +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      2.56824E+01         2.29575E-12         3.18854E-15    +
+  +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      2.56824E+01         2.29211E-12         3.18349E-15    +
   +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                        TOTAL FLUX INTO DOMAIN --      5.16359E+03         5.13790E+01         7.13598E-02    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -3.15559E+03        -5.13349E+01        -7.12985E-02    +
@@ -1339,7 +1338,7 @@ K
   +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -8.18216E+00        -3.98824E-14        -5.53922E-17    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -8.18216E+00        -3.98788E-14        -5.53873E-17    +
   +                                        TOTAL FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -6.42865E+02        -4.29837E-02        -5.96995E-05    +
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
@@ -1361,7 +1360,7 @@ N
   +                                        TOTAL FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -1.37251E+03        -6.71643E-05        -9.32838E-08    +
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      1.31772E-06         3.38433E-14         4.70047E-17    +
+  +                     CHANGE IN SOLUTE DUE TO CHEMICAL REACTION --      1.31772E-06         3.38434E-14         4.70047E-17    +
   +                                   SOLUTE FROM BOUNDARY CHANGE --     -3.01148E-09         0.00000E+00         0.00000E+00    +
   +                             CHANGE IN SOLUTE STORED IN DOMAIN --     -1.37251E+03        -6.46596E-05        -8.98050E-08    +
   +                                           SOLUTE MASS BALANCE --     -4.30181E-04        -2.50472E-06        -3.47878E-09    +
@@ -1375,7 +1374,7 @@ Na
   +             FLUX INTO DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +           FLUX OUT OF DOMAIN ACROSS SPECIFIED FLUX BOUNDARIES --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                         DIFFUSIVE/DISPERSIVE FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
-  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -2.40650E+01        -1.06321E-13        -1.47668E-16    +
+  +                       DIFFUSIVE/DISPERSIVE FLUX OUT OF DOMAIN --     -2.40650E+01        -1.06319E-13        -1.47665E-16    +
   +                                        TOTAL FLUX INTO DOMAIN --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                      TOTAL FLUX OUT OF DOMAIN --     -1.87980E+03        -2.53394E-02        -3.51937E-05    +
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +

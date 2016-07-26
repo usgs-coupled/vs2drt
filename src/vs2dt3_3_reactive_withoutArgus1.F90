@@ -1400,7 +1400,7 @@
           status = RM_RunCells(rm_id)
           call GetConcentrationsRM(cc)
           !call FH_WriteFiles(rm_id, ihdf, imedia, ixyz, nprchxz, iprrestartflag) 
-          call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz, iprrestartflag)
+          call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
       END IF      
       if (solute) then
           if (heat) then
