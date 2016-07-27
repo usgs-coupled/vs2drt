@@ -1402,7 +1402,7 @@
           status = RM_RunCells(rm_id)
           call GetConcentrationsRM(cc)
           !call FH_WriteFiles(rm_id, ihdf, imedia, ixyz, nprchxz, iprrestartflag) 
-          call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
+          !call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
       END IF      
       if (solute) then
           if (heat) then
@@ -2415,7 +2415,7 @@
               !call FH_WriteFiles(rm_id, ihdf, imedia, ixyz, nprchxz, iprrestartflag) 
               !call FH_SetPointers(xnode(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
               call FH_SetPointers(RX(1), DZZ(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
-              call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
+              !call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
           END IF
       END IF
 !
@@ -5713,6 +5713,8 @@
       use rpropsh
       use scon
       use disch
+      use PRICON
+      use vs2dt_rm
       IMPLICIT DOUBLE PRECISION (A-H,P-Z)
       
       COMMON/ISPAC/NLY,NLYY,NXR,NXRR,NNODES,Nsol,Nodesol
@@ -5978,6 +5980,7 @@
       IF(SOLUTE) THEN
       WRITE(6,4121)
       CALL VSOUTS(1,CC)
+      call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
       END IF      
       CONTINUE
       RETURN
