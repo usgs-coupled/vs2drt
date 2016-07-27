@@ -9,7 +9,6 @@ Module vs2dt_rm
     logical :: solute_rm
     logical :: RM_OK = .TRUE. 
  
-         !     call FH_SetPointers(xnode(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
         INTERFACE
             SUBROUTINE FH_SetPointers(x, z, x_index, z_index, ic1_reordered, theta, forward1) &
                 BIND(C, NAME='FH_SetPointers')
@@ -18,13 +17,12 @@ Module vs2dt_rm
                 REAL(KIND=C_DOUBLE), INTENT(in) :: x, z, theta
                 INTEGER(KIND=C_INT), INTENT(in) :: x_index, z_index, ic1_reordered, forward1
             END SUBROUTINE FH_SetPointers
-        !       call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
                 
-            SUBROUTINE FH_WriteFiles(rm_id, i1, i2, i3, nprchxz, iprrestartflag) &
+            SUBROUTINE FH_WriteFiles(rm_id, xz_on, obs_on, xz_mask, obs_mask) &
                 BIND(C, NAME='FH_WriteFiles')
                 USE ISO_C_BINDING
                 IMPLICIT NONE
-                INTEGER(KIND=C_INT), INTENT(in) :: rm_id, i1, i2, i3, nprchxz, iprrestartflag
+                INTEGER(KIND=C_INT), INTENT(in) :: rm_id, xz_on, obs_on, xz_mask, obs_mask
             END SUBROUTINE FH_WriteFiles
         END INTERFACE  
         

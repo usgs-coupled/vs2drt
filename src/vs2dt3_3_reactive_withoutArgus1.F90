@@ -1401,8 +1401,6 @@
           !endif
           status = RM_RunCells(rm_id)
           call GetConcentrationsRM(cc)
-          !call FH_WriteFiles(rm_id, ihdf, imedia, ixyz, nprchxz, iprrestartflag) 
-          !call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
       END IF      
       if (solute) then
           if (heat) then
@@ -2412,10 +2410,7 @@
               status = RM_SetSaturation(rm_id, theta)
               status = RM_RunCells(rm_id)
               call GetConcentrationsRM(cc)
-              !call FH_WriteFiles(rm_id, ihdf, imedia, ixyz, nprchxz, iprrestartflag) 
-              !call FH_SetPointers(xnode(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
               call FH_SetPointers(RX(1), DZZ(1), xnode(1), znode(1), ic1_reordered(1,1), theta(1), forward1(1))
-              !call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
           END IF
       END IF
 !
@@ -5736,7 +5731,7 @@
       LOGICAL HEAT,SOLUTE
       COMMON/TRANSTYPE/HEAT,SOLUTE
       COMMON/TCON1/NIS,NIS1,NIS3
-     
+      integer :: io13p
 !-------------------------------------------------------------------
 !
 !   OUTPUT RESULTS TO FILE 11 AT EACH TIME STEP
@@ -5980,7 +5975,13 @@
       IF(SOLUTE) THEN
       WRITE(6,4121)
       CALL VSOUTS(1,CC)
-      call FH_WriteFiles(rm_id, 0, 0, 1, nprchxz(1), iprrestartflag)
+      if (o13p) then
+          io13p = 1
+      else
+          io13p = 0
+      endif
+      io13p = 1
+      call FH_WriteFiles(rm_id, 1, io13p, nprchxz(1), nprchxz(1))
       END IF      
       CONTINUE
       RETURN
