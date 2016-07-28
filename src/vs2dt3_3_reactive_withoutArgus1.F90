@@ -1223,6 +1223,7 @@
       COMMON/FLO/FLOW
       COMMON/SCON1/ITESTS
       character(100) msg
+      integer :: iPRNT
       
 !
 ! -------------------------------------------------------------
@@ -1383,7 +1384,9 @@
           status = RM_SetTimeStep(rm_id, delt)
           status = RM_SetTimeConversion(rm_id, cnvtmi)
           status = RM_SetPrintChemistryMask(rm_id, nprchem)
-          status = RM_SetPrintChemistryOn(rm_id, ipout, ipout, ipout)
+          iPRNT = 0
+          if (PRNT) iPRNT = 1
+          status = RM_SetPrintChemistryOn(rm_id, iPRNT, 0, 0)
           DO J=1,NLY
               DO N=1,NXR
                   IN=NLY*(N-1)+J
@@ -1516,7 +1519,7 @@
       common/ITEMK/KNLY,KNXR,KNNODE
       integer :: iu = 101
       CHARACTER*256 :: myline
-      INTEGER       :: myerr
+      INTEGER       :: myerr, iPRNT
       
       !!@@include 'd_idummAlloc.inc'
       allocate(IDUM(NXR))
@@ -2405,12 +2408,14 @@
               IF (HEAT) THEN
                   status = RM_SetTemperature(rm_id, tt)
               endif
-              
+
               status = RM_SetTime(rm_id, 0.0d0)
               status = RM_SetTimeStep(rm_id, delt)
               status = RM_SetTimeConversion(rm_id, cnvtmi)
               status = RM_SetPrintChemistryMask(rm_id, nprchem)
-              status = RM_SetPrintChemistryOn(rm_id, ipout, ipout, ipout)
+              iPRNT = 0
+              if (PRNT) iPRNT = 1
+              status = RM_SetPrintChemistryOn(rm_id, iPRNT, 0, 0)
               status = RM_SetSaturation(rm_id, theta)
               status = RM_RunCells(rm_id)
               call GetConcentrationsRM(cc)
@@ -5735,7 +5740,7 @@
       LOGICAL HEAT,SOLUTE
       COMMON/TRANSTYPE/HEAT,SOLUTE
       COMMON/TCON1/NIS,NIS1,NIS3
-      integer :: io13p
+      integer :: io11p
 !-------------------------------------------------------------------
 !
 !   OUTPUT RESULTS TO FILE 11 AT EACH TIME STEP
@@ -5980,13 +5985,12 @@
       IF(SOLUTE) THEN
       WRITE(6,4121)
       CALL VSOUTS(1,CC)
-      if (o13p) then
-          io13p = 1
+      if (o11p) then
+          io11p = 1
       else
-          io13p = 0
+          io11p = 0
       endif
-      io13p = 1
-      call FH_WriteFiles(rm_id, 1, io13p, NPRCHXZ(1), NPRCHOBS(1))
+      call FH_WriteFiles(rm_id, 1, io11p, NPRCHXZ(1), NPRCHOBS(1))
       END IF      
       CONTINUE
       RETURN
