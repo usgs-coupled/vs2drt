@@ -456,20 +456,16 @@
       IF(SOLUTE)THEN
           READ (5,'(A)',IOSTAT=myerr) myline
           if (myerr .eq. 0) then
-             READ (myline,*,IOSTAT=myerr)IPRNTCHE,INPRXZ,IPOUT
+             READ (myline,*,IOSTAT=myerr)INPRXZ
           else
              write(6,'(A)') 'Unexpected end of file.'
           endif
           if (myerr .ne. 0) then
-              write(6,'(A)') 'Error reading: IPRNTCHE,INPRXZ,IPOUT'
+              write(6,'(A)') 'Error reading: INPRXZ'
               write(6,'(A,A)') 'Last line: ', myline
               flush(6)
-              stop 'Error reading: IPRNTCHE,INPRXZ,IPOUT'
+              stop 'Error reading: INPRXZ'
           endif
-  !    DO 5 I=1,NNODES
-  !    NPRCHEM(I)= IPRNTCHE
-  !    NPRCHXZ(I)= INPRXZ
-  !5   CONTINUE
       END IF     
       READ (5,'(A)',IOSTAT=myerr) myline
       if (myerr .eq. 0) then
@@ -715,7 +711,7 @@
  717  CONTINUE
       
       DO 5 I=1,NNODES
-      NPRCHEM(I)= IPRNTCHE
+      NPRCHEM(I)= 1
       NPRCHXZ(I)= INPRXZ
 5     CONTINUE   
       
