@@ -149,7 +149,7 @@
       end module TEMP
 
       module PRICON
-      integer, allocatable::NPRCHEM(:),NPRCHXZ(:)
+      integer, allocatable::NPRCHEM(:),NPRCHXZ(:),NPRCHOBS(:)
       integer NPRCONC,NPSCRN,IPOUT
       end module PRICON
 

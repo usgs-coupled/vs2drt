@@ -576,7 +576,7 @@
       allocate(phreeC(Nodesol))
       allocate(CMIXFARC(7,NNODES),BCSOL(Nsol),INDSOL1(7,NNODES),INDSOL2(7,NNODES))
 	  allocate(ic1_reordered(nnodes,7))
-      allocate(NPRCHEM(NNODES),NPRCHXZ(NNODES))
+      allocate(NPRCHEM(NNODES),NPRCHXZ(NNODES),NPRCHOBS(NNODES))
       allocate(BLSOL(Nsol,36),bl62I(Nsol),bl62IT(Nsol),bl62O(Nsol),bl62OT(Nsol), &
              bcmtt(Nsol),bcmt(Nsol),bcmtr(Nsol),bltemp36(Nsol),bltemp39(Nsol), &
              bltemp42(Nsol),bltemp45(Nsol),bltemp60(Nsol))
@@ -671,7 +671,8 @@
       RHO(I) = 0.0D0
       RHOOLD(I) = 0.0D0
       NPRCHEM(I) = 0
-      NPRCHXZ(I) = 0 
+      NPRCHXZ(I) = 0
+      NPRCHOBS(I) = 0
  711  CONTINUE
       DO 714 I=1, NNODES
       DO 713 M=1, Nsol
@@ -2323,16 +2324,19 @@
                       INDSOL1(1,IN)=-1
                       NPRCHEM(IN)=0
                       NPRCHXZ(IN)=0
+                      NPRCHOBS(IN)=0
                    else 
                     if (J.eq.1.or.J.eq.NXR)then
                       INDSOL1(1,IN)=-1
                       NPRCHEM(IN)=0
                       NPRCHXZ(IN)=0
+                      NPRCHOBS(IN)=0
                      else 
                       if (HX(IN).LE.0.0D0) then
                        INDSOL1(1,IN)=-1
                        NPRCHEM(IN)=0
                        NPRCHXZ(IN)=0
+                       NPRCHOBS(IN)=0
                      end if
                     end if 
                    end if    
@@ -5743,6 +5747,7 @@
         
       DO 10 J=1,NOBS
       N=IJOBS(J)
+      NPRCHOBS(N)=1
       I=N/NLY+1
       J1=MOD(N,NLY)
       IF(HX(N).NE.0.0D0) THEN
@@ -5981,7 +5986,7 @@
           io13p = 0
       endif
       io13p = 1
-      call FH_WriteFiles(rm_id, 1, io13p, nprchxz(1), nprchxz(1))
+      call FH_WriteFiles(rm_id, 1, io13p, NPRCHXZ(1), NPRCHOBS(1))
       END IF      
       CONTINUE
       RETURN
@@ -9156,7 +9161,8 @@
       if (allocated(INDSOL2))deallocate(INDSOL2)
       if (allocated(ic1_reordered))deallocate(ic1_reordered)
       if (allocated(NPRCHEM))deallocate(NPRCHEM)
-      if (allocated (NPRCHXZ))deallocate(NPRCHXZ) 
+      if (allocated(NPRCHXZ))deallocate(NPRCHXZ) 
+      if (allocated(NPRCHOBS))deallocate(NPRCHOBS)
       if (allocated(BLSOL))deallocate(BLSOL)
       if (allocated(bl62I))deallocate(bl62I)
       if (allocated(bl62IT))deallocate(bl62IT)
