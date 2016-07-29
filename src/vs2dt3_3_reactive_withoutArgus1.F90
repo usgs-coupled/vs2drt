@@ -55,6 +55,7 @@
 #ifdef USE_MPI
       status = RM_MpiWorkerBreak(rm_id)
 #endif
+      CALL FH_FinalizeFiles
       status = RM_Destroy(rm_id)
 #ifdef USE_MPI
       call MPI_FINALIZE(status)
