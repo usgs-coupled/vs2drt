@@ -1,0 +1,6 @@
+<CPackWiXPatch>
+  <CPackWiXFragment Id="CM_CP_bin.vs2drt.exe">
+    <Environment Action="set" Id="path_vs2drt" Name="PATH_VS2DRT" System="yes" Value="[INSTALL_ROOT]bin"/>
+    <Environment Action="set" Id="path" Name="Path" Part="last" System="yes" Value="%PATH_VS2DRT%" />
+  </CPackWiXFragment>
+</CPackWiXPatch>
