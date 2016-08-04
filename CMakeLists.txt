@@ -1,6 +1,7 @@
 cmake_minimum_required (VERSION 2.8)
 project(vs2drt C CXX Fortran)
 add_subdirectory(src)
+add_subdirectory(doc)
 
 set(CPACK_GENERATOR WIX)
 set(CPACK_PACKAGE_NAME "vs2drt")
@@ -11,5 +12,11 @@ set(CPACK_PACKAGE_VERSION_MINOR "4")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
 set(CPACK_WIX_UPGRADE_GUID "01A3E7D5-388A-42A3-81E7-9916FFA4D62D")
 set(CPACK_WIX_PATCH_FILE "${CMAKE_CURRENT_SOURCE_DIR}/patch.xml")
+
+if (VS2DRT_OPENMP_FOUND)
+  if (MSVC11)
+    set(CPACK_WIX_TEMPLATE "${CMAKE_CURRENT_SOURCE_DIR}/WIX.MSVC11.template.in")    
+  endif()
+endif()
 
 INCLUDE(CPack)
