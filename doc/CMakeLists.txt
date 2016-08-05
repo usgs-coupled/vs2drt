@@ -1,0 +1,1 @@
+install(FILES inputdata_format_rwh.pdf DESTINATION doc)
