@@ -23,4 +23,10 @@ if (VS2DRT_OPENMP_FOUND)
   endif()
 endif()
 
+if (WIN32)
+  set(CPACK_GENERATOR ZIP)
+else()
+  set(CPACK_GENERATOR TGZ)
+endif()
+
 INCLUDE(CPack)
