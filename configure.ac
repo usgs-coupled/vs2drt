@@ -2,8 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.61])
-AC_INIT([vs2drt], [1.1.1-10000], [rwhealy@usgs.gov])
-##LT_INIT
+AC_INIT([vs2drt], [1.0.0-10000], [rwhealy@usgs.gov])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -55,8 +54,6 @@ AC_FC_MAIN
 AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
-##AC_PROG_LIBTOOL
-LT_INIT
 
 # determine f90 module suffix
 AX_F90_MODULE_EXTENSION
@@ -144,26 +141,19 @@ AM_CONDITIONAL([BUILD_MPI], [test "X$with_mpi" = "Xyes"])
 # set vs2drt suffix
 if test "X$with_mpi" != "Xno"; then
   AC_DEFINE([USE_MPI], [] , [Set to use MPI])
-  PHAST_SUFFIX=mpi
   MPIEXEC=mpiexec
   MPIEXEC_NUMPROC_FLAG=-np
 else
   if test "X$enable_openmp" != "Xno"; then
     AC_DEFINE([USE_OPENMP], [], [Set to to use OpenMP])
-    PHAST_SUFFIX=openmp
-  else
-    PHAST_SUFFIX=ser
   fi
 fi
-AC_SUBST(PHAST_SUFFIX)
 AC_SUBST(MPIEXEC)
 AC_SUBST(MPIEXEC_NUMPROC_FLAG)
 
 AC_CONFIG_FILES([
   Makefile
 ])
-
-##AC_CONFIG_SUBDIRS([src/PhreeqcRM])
 
 AC_OUTPUT
 echo "*************************************"
@@ -181,4 +171,3 @@ else
 fi
 echo "Enable MPI                   = $with_mpi"
 echo "*************************************"
-
