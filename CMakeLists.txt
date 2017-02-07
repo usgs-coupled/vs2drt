@@ -23,9 +23,7 @@ if (VS2DRT_OPENMP_FOUND)
   endif()
 endif()
 
-if (WIN32)
-  set(CPACK_GENERATOR ZIP)
-else()
+if (NOT WIN32)
   set(CPACK_GENERATOR TGZ)
 endif()
 
