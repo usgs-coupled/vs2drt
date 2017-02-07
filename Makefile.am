@@ -1,6 +1,15 @@
-EXTRA_DIST=CMakeLists.txt
+EXTRA_DIST=CMakeLists.txt \
+           doc/CMakeLists.txt \
+           doc/inputdata_format_rwh.pdf \
+           src/CMakeLists.txt \
+           src/PhreeqcRM/CMakeLists.txt
 
-AM_CPPFLAGS=-I$(srcdir)/src/PhreeqcRM/src -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/common -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/PhreeqcKeywords $(BOOST_CPPFLAGS)
+AM_CPPFLAGS=-I$(srcdir)/src/PhreeqcRM/src \
+            -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast \
+            -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc \
+            -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp \
+            -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/common \
+            -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/PhreeqcKeywords
 
 AM_FCFLAGS=-I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc
 
@@ -15,18 +24,6 @@ else
 bin_PROGRAMS = vs2drt-ser
 endif #BUILD_OPENMP
 endif #BUILD_MPI 
-
-
-#	src/gzstream.cxx\
-#	src/vsrt_files.h\
-#	src/cxxvsrtSubs.cxx\
-#	src/vsrtsubs.c\
-#	src/vsrt.cxx\
-#	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/pp_sys.cpp\
-#	src/vsrt_files.c\
-#	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/IPhreeqcF.f\
-#	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/class_main.cpp\
-#
 
 VS2DRT_SRC=\
 	.depend\
@@ -214,11 +211,8 @@ VS2DRT_SRC=\
 	src/PhreeqcRM/src/RM_interface_F.h\
 	src/PhreeqcRM/src/RM_interface_C.h\
 	src/PhreeqcRM/src/IrmResult.h\
-	src/vsrt.h\
 	src/FileHandler.cpp\
 	src/Call_RM.F90\
-	src/gzstream.h\
-	src/vsrtproto.h\
 	src/FileHandler.h\
 	src/Pointers_to_fortran.h
 
@@ -293,3 +287,4 @@ CLEANFILES=\
 
 
 include .depend
+
