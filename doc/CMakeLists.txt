@@ -1,1 +1,1 @@
-install(FILES inputdata_format_rwh.pdf DESTINATION doc)
+install(FILES VS2DRT_Input_Instructions.pdf DESTINATION doc)
