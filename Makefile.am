@@ -1,6 +1,6 @@
 EXTRA_DIST=CMakeLists.txt \
            doc/CMakeLists.txt \
-           doc/inputdata_format_rwh.pdf \
+           doc/VS2DRT_Input_Instructions.pdf \
            src/CMakeLists.txt \
            src/PhreeqcRM/CMakeLists.txt
 
