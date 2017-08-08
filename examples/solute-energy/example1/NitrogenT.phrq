@@ -1,0 +1,159 @@
+DATABASE C:\Program Files (x86)\USGS\Phreeqc Interactive 3.1.7-9213\database\Amm.dat
+SOLUTION_MASTER_SPECIES
+    [N]        [N]2          0     1               1
+
+SOLUTION_SPECIES
+12H+ + 2NO3- + 10e- = N2 + 6H2O
+    log_k     -207.08  # removes N2(aq) from calculations
+[N]2 = [N]2
+    log_k     0
+
+PHASES
+[N]2(g)
+    [N]2 = [N]2
+    log_k     -3.26
+    delta_h   -1.358 kcal
+
+RATES
+    Nitrification
+-start
+10 k = 1 / (3600 * 24) # 1/s
+20 o2_half = 1e-5 # mol/kgw
+30 o2_monod = TOT("O(0)")/(TOT("O(0)") + o2_half)
+40 amm_half = 2e-6 # mol/kgw
+50 amm_monod = TOT("Amm")/(TOT("Amm") + amm_half)
+60 rate = k * TOT("Amm") * o2_monod * amm_monod # could use different eqn
+70 moles = rate * TIME * TOT("water")
+80 SAVE moles
+#90 print moles, TOT("Amm"), k, TIME
+-end
+
+    Amm_from_SOC
+-start
+10 k = 1e-10 # mol/kgw/s constant rate
+20 rate = k
+30 SAVE rate * TIME * TOT("water")
+-end
+
+    Denitrification
+-start
+10 k = 0.5 / (3600 * 24) # 1/s
+20 o2_half = 1e-5 # mol/kgw
+30 o2_inhib = o2_half/(TOT("O(0)") + o2_half)
+40 no3_half = 1e-5 # mol/kgw
+50 no3_monod = TOT("N(5)")/(TOT("N(5)") + no3_half)
+60 rate = k * TOT("N(5)") * o2_inhib # could use different eqn
+70 SAVE rate * TIME
+-end
+
+    Decomposition
+-start
+10 REM  0.1 per day
+20 k = 0.2/86400
+30 rate = k*MOL("O2")
+40 moles = rate*TIME
+50 SAVE moles
+60 END
+-end
+
+KINETICS  1
+Decomposition
+    -formula  CH2O  0.5
+    -m        1
+    -m0       1
+    -tol      1e-008
+
+Nitrification
+    -formula  Amm  -1 NH3  1
+    -m        10
+    -m0       10
+    -tol      1e-008
+
+Amm_from_SOC
+    -formula  Amm  +1
+    -m        10
+    -m0       10
+    -tol      1e-008
+
+#Denitrification
+#    -formula  N  -1 [N]2 0.5
+#    -m        10
+#    -m0       10
+#    -tol      1e-008
+-cvode
+-step_divide 1
+-runge_kutta 3
+-bad_step_max 500
+ END
+
+KINETICS 2-15
+Decomposition
+    -formula  CH2O  0.5
+    -m        1
+    -m0       1
+    -tol      1e-008
+Nitrification
+    -formula  Amm  -1 NH3  1
+    -m        10
+    -m0       10
+    -tol      1e-008
+
+#Denitrification
+#    -formula  N  -1 [N]2 0.5
+#    -m        10
+#    -m0       10
+#    -tol      1e-008
+ END
+
+SOLUTION 0
+    temp      25
+    pH        7
+    pe        4
+    redox     pe
+    units     mmol/kgw
+    density   1
+    O(0)      1 O2(g)      -0.7
+    -water    1 # kg
+SOLUTION 1-15
+    temp      25
+    pH        7
+    pe        4
+    redox     pe
+    units     mmol/kgw
+    density   1
+    O(0)      1 O2(g)      -0.7
+    N(5)      1e-3
+    -water    1 # kg
+END
+
+#TRANSPORT
+#    -length  0.1
+#    -time_step 86400
+#    -cells 15
+#    -shifts 15
+#    -warnings true
+#    -punch_frequency 15
+
+USER_GRAPH
+ -axis_scale sy  -0 15
+ -headings Distance Amm Nitrate Dissolved_N2 DO
+ -initial_solutions
+ -axis_scale sy_axis  0  10
+ -connect_simulations false
+ -plot_concentration_vs X
+ -axis_titles "Depth" "mol/kgw" "DO, mg/kgw"
+ -start
+ 10 graph_x dist
+ 20 graph_y TOT("Amm")
+ 40 graph_y TOT("N(5)")
+ 50 graph_y TOT("[N]")
+ 60 graph_sy 1000*32*TOT("O(0)")/ 2
+
+ -end
+
+END
+
+
+
+
+
