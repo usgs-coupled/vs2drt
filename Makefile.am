@@ -269,6 +269,7 @@ CLEANFILES=\
 	pricon.$(F90_MODEXT)\
 	ptet.$(F90_MODEXT)\
 	react.$(F90_MODEXT)\
+	reduce_time.$(F90_MODEXT)\
 	rpropsh.$(F90_MODEXT)\
 	rspac.$(F90_MODEXT)\
 	scon.$(F90_MODEXT)\
