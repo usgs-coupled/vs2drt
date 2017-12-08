@@ -1269,7 +1269,7 @@ logical function pmgmres_ilu_cr ( n, nz_num, ia, ja, a, x, rhs, itr_max, mr, &
       end if
 
       mu = sqrt ( h(k,k)**2 + h(k+1,k)**2 )
-
+      IF (mu <= 0.0d0) mu = 1e-14
       c(k) = h(k,k) / mu
       s(k) = -h(k+1,k) / mu
       h(k,k) = c(k) * h(k,k) - s(k) * h(k+1,k)

@@ -168,7 +168,7 @@
     use react
     USE vs2dt_rm
     USE PhreeqcRM
-    use gmres1, only : a_gmr, ia_gmr, ja_gmr, rhs_gmr
+    use gmres1, only : a_gmr, ia_gmr, ja_gmr, rhs_gmr, alu, jlu, ju, jw, w, iwk
     IMPLICIT DOUBLE PRECISION (A-H,P-Z)
     !{{
     !!      INTEGER, INTENT(IN) :: iold
@@ -556,6 +556,12 @@
     allocate (ia_gmr(5*nnodes))
     allocate (ja_gmr(5*nnodes))
     
+    iwk = 25*nnodes
+    allocate(alu(iwk))
+    allocate(jlu(iwk))
+    allocate(ju(nnodes))
+    allocate(jw(2*nnodes))
+    allocate(w(nnodes+1))
     IF (SOLUTE) THEN  
         DO 7 I=1,Nsol 
             compname(I)  = scompname(I)
@@ -1209,7 +1215,7 @@
         RETURN
     ENDIF
     
-    write(stderr,"(A,F12.2)") "Beginning time: ", stim
+    write(stderr,"(A,F12.4)") "Beginning time: ", stim
     !
     TRANS1=.FALSE.
     !     IF(.NOT.SSTATE) THEN
@@ -1223,7 +1229,7 @@
     !
     !   SET UP AND SOLVE MATRIX EQUATIONS FOR FLOW
     !
-    if((nit3.gt.100) .or. (jstop .eq.10)) then
+    if((nit3.gt.20) .or. (jstop .eq.10)) then
         nit3=0
         reduce_time_step = .true.
         jstop = 0
@@ -3225,6 +3231,22 @@
     COMMON/TRXY/EPS1,EPS2,EPS3,TRANS,TRANS1,TRANS2,SSTATE,MB9(99),NMB9
     logical solved, pmgmres_ilu_cr
     real ( kind = 8 ) xdiff, xdiffMax
+    interface
+        subroutine pgmres(n_order, mr, rhs_gmr, xi, vv_gmr, eps, itmax1, iout,&
+                         a_gmr, ja_gmr, ia_gmr, alu, jlu, ju, ierr)   
+        integer n_order, mr
+        double precision, allocatable :: rhs_gmr(:), xi(:)
+        double precision, allocatable, TARGET :: vv_gmr(:,:)
+        double precision :: eps
+        integer :: itmax1, iout
+        double precision, allocatable :: a_gmr(:)
+        integer, allocatable :: ja_gmr(:), ia_gmr(:)
+        double precision, allocatable :: alu(:)
+        integer, allocatable :: jlu(:), ju(:)
+        integer :: ierr
+        end subroutine pgmres
+                         
+    end interface
     !
     ! ......................................................................
     !  START OF LINEARIZATION ITERATION LOOP
@@ -3487,6 +3509,24 @@
         !   tol_abs, tol_rel )
         solved = pmgmres_ilu_cr ( n_order, nz_num, ia_gmr, ja_gmr, a_gmr, xi, rhs_gmr, itmax1, mr, &
         eps, eps )
+        !lfil = 5
+        !droptol = 0.0
+        !iout = 0
+        !allocate(vv_gmr(n,mr+1))
+        !vv_gmr = 0.0d0
+        !alu = 0.0d0
+        !jlu = 0
+        !ju = 0
+        !call ilut(n_order,a_gmr,ja_gmr,ia_gmr,lfil,droptol,alu,jlu,ju,iwk,w,jw,ierr)
+        !
+        !call pgmres(n_order, mr, rhs_gmr, xi, vv_gmr, eps, itmax1, iout,&
+        !                 a_gmr, ja_gmr, ia_gmr, alu, jlu, ju, ierr)
+        !deallocate(vv_gmr)
+        !solved = .false.
+        if (ierr .eq. 0) then
+            solved = .true.
+        endif
+        
         if (solved) then
         n_order = 0
         DO 301 I=2,NXRR
@@ -3495,7 +3535,7 @@
                 N=N1+J
                 n_order = n_order + 1
                 if(hx(n).ne.0.0d0.and.ntyp(n).ne.1) then
-                    p(n) = p(n) + xi(n_order)
+                    p(n) = p(n) + xi(n_order)*0.7
                     xdiff = dabs(xi(n_order))
                     if (xdiff.gt.xdiffMax) xdiffMax = xdiff
                 end if

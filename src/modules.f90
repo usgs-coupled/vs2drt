@@ -153,9 +153,18 @@
       double precision, allocatable::x3(:)
       integer (kind=4), allocatable::ia_gmr(:)
       integer (kind=4), allocatable::ja_gmr(:)
-      logical use_gmres_flow /.false./
-      logical use_gmres_heat /.false./
-      logical use_gmres_solute /.false./
+      logical use_gmres_flow /.true./
+      logical use_gmres_heat /.true./
+      logical use_gmres_solute /.true./
+      double precision, allocatable::alu(:)
+      integer(kind=4), allocatable::jlu(:)
+      integer(kind=4), allocatable::ju(:)
+      integer(kind=4), allocatable::jw(:)
+      double precision, allocatable:: w(:)
+      double precision, allocatable, TARGET :: vv_gmr(:,:)
+      integer :: iwk, ierr, lfil
+      double precision :: droptol
+      
       end module gmres1
 
       module TEMP
