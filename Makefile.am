@@ -27,6 +27,7 @@ endif #BUILD_MPI
 
 VS2DRT_SRC=\
 	.depend\
+	src/mgmres.f90\
 	src/modules.f90\
 	src/vs2dt3_3_reactive_withoutArgus1.F90\
 	src/PhreeqcRM/src/RM_interface_C.cpp\
@@ -250,6 +251,7 @@ CLEANFILES=\
 	dumm.$(F90_MODEXT)\
 	equat.$(F90_MODEXT)\
 	equats.$(F90_MODEXT)\
+	gmres1.$(F90_MODEXT)\
 	hcon.$(F90_MODEXT)\
 	idumm.$(F90_MODEXT)\
 	ihdumm.$(F90_MODEXT)\
