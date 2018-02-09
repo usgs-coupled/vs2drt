@@ -1,0 +1,14 @@
+
+# /
+/.depend
+/Makefile.in
+/configure
+/aclocal.m4
+/autom4te.cache
+/config
+
+# /src/
+
+# /src/vs2008/
+/src/vs2008/vs2drt.suo
+/src/vs2008/vs2drt.u2d
