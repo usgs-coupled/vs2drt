@@ -29,6 +29,7 @@ VS2DRT_SRC=\
 	.depend\
 	src/mgmres.f90\
 	src/modules.f90\
+	src/parallel_solute_transport.F90\
 	src/vs2dt3_3_reactive_withoutArgus1.F90\
 	src/PhreeqcRM/src/RM_interface_C.cpp\
 	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqcPhast.cxx\
@@ -284,6 +285,7 @@ CLEANFILES=\
 	trxv.$(F90_MODEXT)\
 	trxxh.$(F90_MODEXT)\
 	trxx.$(F90_MODEXT)\
+	trxy0.$(F90_MODEXT)\
 	trxy1.$(F90_MODEXT)\
 	trxy2.$(F90_MODEXT)\
 	vs2dt_rm.$(F90_MODEXT)
