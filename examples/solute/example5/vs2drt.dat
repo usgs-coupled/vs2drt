@@ -70,8 +70,8 @@ F F T F F              /A-13 -- THPT, SPNT, PPNT, HPNT, VPNT
 102 2
 12                     /A-24 -- NMB9
 13 14 15 16 17 18 28 29 30 31 32 33     /A-25 -- MB9
-1.0E-4 0.7 0.5         /B-1 -- EPS, HMAX, WUS
-1.0E-4                 /B-3 -- EPS3
+1.0E-8 0.7 0.5         /B-1 -- EPS, HMAX, WUS
+1.0E-8                 /B-3 -- EPS3
 2 80                   /B-4 -- MINIT, ITMAX
 T                      /B-5 -- PHRD
 2 6                    /B-6 -- NTEX, NPROP
@@ -4110,9 +4110,9 @@ F                      /C-5 -- PRNT
 F F F                  /C-6 -- BCIT, ETSIM, SEEP
 0                      /C-10 -- IBC
 2 2 1 -0.1             /C-11 -- JJ, NN, NTX, PFDUM
-0 1 -1 1.              /C-13 -- NTC, INSBC1, INSBC2, SBFRAC
+0 1                    /C-13 -- NTC, INSBC1
 501 2 7 0.0            /C-11 -- JJ, NN, NTX, PFDUM
-0 0 -1 1.              /C-13 -- NTC, INSBC1, INSBC2, SBFRAC
+0 0                    /C-13 -- NTC, INSBC1
 -999999                /C-19 -- End of data for recharge period 1
 500000.0 0.1           /C-1 -- TPER, DELT (Recharge Period 2)
 1.5 1000.0 0.001 0.1    /C-2 -- TMLT, DLTMX, DLTMIN, TRED
@@ -4122,7 +4122,7 @@ F                      /C-5 -- PRNT
 F F F                  /C-6 -- BCIT, ETSIM, SEEP
 0                      /C-10 -- IBC
 2 2 1 -1.0             /C-11 -- JJ, NN, NTX, PFDUM
-0 2 -1 1.              /C-13 -- NTC, INSBC1, INSBC2, SBFRAC
+0 2                    /C-13 -- NTC, INSBC1
 -999999                /C-19 -- End of data for recharge period 2
 120000.0 0.1           /C-1 -- TPER, DELT (Recharge Period 3)
 1.5 400.0 0.001 0.1    /C-2 -- TMLT, DLTMX, DLTMIN, TRED
@@ -4132,6 +4132,6 @@ F                      /C-5 -- PRNT
 F F F                  /C-6 -- BCIT, ETSIM, SEEP
 0                      /C-10 -- IBC
 2 2 1 -0.1             /C-11 -- JJ, NN, NTX, PFDUM
-0 0 -1 1.              /C-13 -- NTC, INSBC1, INSBC2, SBFRAC
+0 0                    /C-13 -- NTC, INSBC1
 -999999                /C-19 -- End of data for recharge period 3
 -999999 /End of input data file

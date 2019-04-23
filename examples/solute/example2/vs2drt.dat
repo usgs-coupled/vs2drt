@@ -84,8 +84,8 @@ F                      /C-5 -- PRNT
 F F F                  /C-6 -- BCIT, ETSIM, SEEP
 0                      /C-10 -- IBC
 2 198 1 10.0           /C-11 -- JJ, NN, NTX, PFDUM
-0 0 -1 1.              /C-13 -- NTC, INSBC1, INSBC2, SBFRAC
+0 0                    /C-13 -- NTC, INSBC1
 2 2 6 225.0            /C-11 -- JJ, NN, NTX, PFDUM
-0 0 -1 1.              /C-13 -- NTC, INSBC1, INSBC2, SBFRAC
+0 0                    /C-13 -- NTC, INSBC1
 -999999                /C-19 -- End of data for recharge period 1
 -999999 /End of input data file
