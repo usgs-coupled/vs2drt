@@ -1,68 +1,12 @@
-TITLE Linear sorption and first order decay
-# Define solute
-SOLUTION_MASTER_SPECIES
-Solute 	Solute	0.0	1	1  # mg = mmol
-SOLUTION_SPECIES
-Solute = Solute
-	log_k 0
-      -gamma 1e5 0.0
-END
-#
-#  Calculation for linear sorption in PHREEQC
-#
-#  Porosity 0.37
-#  Bulk density 1.587 solid/L aquifer
-#  Kd = 0.3 = L/kg = cm^3/g; log(Kd) = -0.5229
-#  Lwater/kgsolid = 0.37/1.587 = 0.2331443; log(Lwater/kgsolid) = -0.6324
-#  with gfw = 1.0, g = mol for Solute
-#  Sites = 1e20 mol/L; log(Sites) = 20
-#  Note: Chemistry cell for VS2DRT has 1e+20 sites in 0.27 L of water.
-#  Note: To be exact, need to multiply by Lwater/kgwater to get Sites in mol/kgw
-#  Lwater/kgwater = 1.003; log(Lwater/kgwater)=0.0013
-#  log(K) = log(Kd)-log(Lwater/kgsolid)-log(Sites)-log(Lwater/kgwater)
-#         = -0.5229- (-0.6324)         - 20       - 0.0013            
-#         = -19.8918
-#
-SURFACE_MASTER_SPECIES
-	Surf 	Surf 
-SURFACE_SPECIES
-Surf = Surf
-	log_k	0.0
-Surf + Solute = SurfSolute
-        log_k     -19.8918
-# Define reaction rate
-RATES
-    Decay
--start
-10 K = -0.01
-20 moles = k*SYS("Solute") * TIME
-30 SAVE moles
--end
-END
-SOLUTION 0 Initial solution and Second inflow solution
+SOLUTION 0 Recharge solution
+-density 0.99704 
 -units mg/L
-Solute 0
-END
-SOLUTION 1 First inflow solution
--density 0.99705
--units mg/L
-Solute 10
-END
-SURFACE 1
-	-no_edl
- 	Surf            1.0E+20
-END
+Cl 0
 USER_PRINT
-5  REM check distribution coefficient calculation
-10 molSorb = MOL("SurfSolute") * TOT("water") 
-20 molDiss = TOTMOL("Solute") 
-30 kd =  molSorb / molDiss * 0.2331443 # L water/kg solid
-40 PRINT "Distribution coefficient, L/kg or cm^3/g: ", kd
+10 print totmol("Cl") * GFW("Cl") / soln_vol
 END
-KINETICS 1
-Decay
-    -formula  Solute  1
-    -m        0
-    -m0       0
-    -tol      1e-8
+SOLUTION 1 Initial solution
+-density 0.99704
+-units mg/L
+Cl 10
 END
