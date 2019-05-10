@@ -99,7 +99,9 @@ if (NOT WIN32)
   set(CPACK_GENERATOR TGZ)
 endif()
 
-INCLUDE(CPack)
+include(CPack)
+
+include(CTest)
 
 add_subdirectory(src)
 add_subdirectory(doc)
