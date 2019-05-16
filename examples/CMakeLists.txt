@@ -24,7 +24,11 @@ solute-energy/example1/pre_1.chem.xz.tsv
 solute-energy/example1/vs2drt.out
 )
 
-install(FILES ${solute_energy_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_energy_example1dir})
+if(WIN32)
+  install(FILES ${solute_energy_example1} DESTINATION ${example_solute_energy_example1dir})
+else()
+  install(FILES ${solute_energy_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_energy_example1dir})
+endif()
 
 
 # solute/example1
@@ -48,7 +52,11 @@ solute/example1/pre.chem.txt
 solute/example1/vs2drt.out
 )
 
-install(FILES ${solute_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example1dir})
+if(WIN32)
+  install(FILES ${solute_example1} DESTINATION ${example_solute_example1dir})
+else()
+  install(FILES ${solute_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example1dir})
+endif()
 
 
 # solute/example2
@@ -72,7 +80,11 @@ solute/example2/vs2drt.dat
 solute/example2/vs2drt.out
 )
 
-install(FILES ${solute_example2} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example2dir})
+if(WIN32)
+  install(FILES ${solute_example2} DESTINATION ${example_solute_example2dir})
+else()
+  install(FILES ${solute_example2} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example2dir})
+endif()
 
 
 # solute/example3
@@ -96,7 +108,11 @@ solute/example3/vs2drt.dat
 solute/example3/vs2drt.out
 )
 
-install(FILES ${solute_example3} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example3dir})
+if(WIN32)
+  install(FILES ${solute_example3} DESTINATION ${example_solute_example3dir})
+else()
+  install(FILES ${solute_example3} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example3dir})
+endif()
 
 
 # solute/example4
@@ -120,7 +136,11 @@ solute/example4/vs2drt.dat
 solute/example4/vs2drt.out
 )
 
-install(FILES ${solute_example4} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example4dir})
+if(WIN32)
+  install(FILES ${solute_example4} DESTINATION ${example_solute_example4dir})
+else()
+  install(FILES ${solute_example4} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example4dir})
+endif()
 
 
 # solute/example5
@@ -144,7 +164,11 @@ solute/example5/vs2drt.dat
 solute/example5/vs2drt.out
 )
 
-install(FILES ${solute_example5} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example5dir})
+if(WIN32)
+  install(FILES ${solute_example5} DESTINATION ${example_solute_example5dir})
+else()
+  install(FILES ${solute_example5} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_solute_example5dir})
+endif()
 
 
 # energy/example1
@@ -164,7 +188,11 @@ energy/example1/vs2drt.fil
 energy/example1/vs2drt.out
 )
 
-install(FILES ${energy_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_energy_example1dir})
+if(WIN32)
+  install(FILES ${energy_example1} DESTINATION ${example_energy_example1dir})
+else()
+  install(FILES ${energy_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_energy_example1dir})
+endif()
 
 
 # energy/example2
@@ -184,7 +212,11 @@ energy/example2/vs2drt.fil
 energy/example2/vs2drt.out
 )
 
-install(FILES ${energy_example2} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_energy_example2dir})
+if(WIN32)
+  install(FILES ${energy_example2} DESTINATION ${example_energy_example2dir})
+else()
+  install(FILES ${energy_example2} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_energy_example2dir})
+endif()
 
 
 # energy/example3
@@ -204,7 +236,11 @@ energy/example3/vs2drt.fil
 energy/example3/vs2drt.out
 )
 
-install(FILES ${energy_example3} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_energy_example3dir})
+if(WIN32)
+  install(FILES ${energy_example3} DESTINATION ${example_energy_example3dir})
+else()
+  install(FILES ${energy_example3} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_energy_example3dir})
+endif()
 
 
 
@@ -225,7 +261,11 @@ flow/example1/variables.out
 flow/example1/vs2drt.out
 )
 
-install(FILES ${flow_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_flow_example1dir})
+if(WIN32)
+  install(FILES ${flow_example1} DESTINATION ${example_flow_example1dir})
+else()
+  install(FILES ${flow_example1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_flow_example1dir})
+endif()
 
 # flow/example2
 #
@@ -244,7 +284,11 @@ flow/example2/vs2drt.fil
 flow/example2/vs2drt.out
 )
 
-install(FILES ${flow_example2} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_flow_example2dir})
+if(WIN32)
+  install(FILES ${flow_example2} DESTINATION ${example_flow_example2dir})
+else()
+  install(FILES ${flow_example2} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_flow_example2dir})
+endif()
 
 
 # flow/example3
@@ -264,7 +308,11 @@ flow/example3/vs2drt.fil
 flow/example3/vs2drt.out
 )
 
-install(FILES ${flow_example3} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_flow_example3dir})
+if(WIN32)
+  install(FILES ${flow_example3} DESTINATION ${example_flow_example3dir})
+else()
+  install(FILES ${flow_example3} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_flow_example3dir})
+endif()
 
 
 # tutorial1
@@ -289,4 +337,8 @@ tutorial1/vs2drt.fil
 tutorial1/vs2drt.out
 )
 
-install(FILES ${tutorial1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_tutorial1dir})
+if(WIN32)
+  install(FILES ${tutorial1} DESTINATION ${example_tutorial1dir})
+else()
+  install(FILES ${tutorial1} DESTINATION ${CMAKE_INSTALL_DOCDIR}/${example_tutorial1dir})
+endif()

@@ -1,4 +1,9 @@
-cmake_minimum_required (VERSION 3.9)
+if (WIN32)
+  cmake_minimum_required(VERSION 3.4)
+else()
+  cmake_minimum_required(VERSION 3.9)
+endif()
+
 project(vs2drt C CXX Fortran)
 
 # check for openmp
