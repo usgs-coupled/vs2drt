@@ -1,8 +1,4 @@
-if (WIN32)
-  cmake_minimum_required(VERSION 3.4)
-else()
-  cmake_minimum_required(VERSION 3.9)
-endif()
+cmake_minimum_required(VERSION 3.4)
 
 project(vs2drt C CXX Fortran)
 
@@ -15,6 +11,46 @@ option(VS2DRT_BUILD_MPI "Build MPI configuration (If Enabled, overrides OpenMP o
 # OpenMP
 if (VS2DRT_BUILD_OPENMP AND (NOT VS2DRT_BUILD_MPI))
   find_package(OpenMP REQUIRED)
+
+  # based on https://cliutils.gitlab.io/modern-cmake/chapters/packages/OpenMP.html
+  if(NOT TARGET OpenMP::OpenMP_CXX)
+    # CMake < 3.9
+    find_package(Threads REQUIRED)
+
+    add_library(OpenMP::OpenMP_CXX IMPORTED INTERFACE)
+
+    set_property(TARGET OpenMP::OpenMP_CXX
+      PROPERTY INTERFACE_COMPILE_OPTIONS ${OpenMP_CXX_FLAGS})
+
+    # Only works if the same flag is passed to the linker; use CMake 3.9+ otherwise (Intel, AppleClang)
+    set_property(TARGET OpenMP::OpenMP_CXX
+      PROPERTY INTERFACE_LINK_LIBRARIES ${OpenMP_CXX_FLAGS} Threads::Threads)
+
+    # set OpenMP_CXX_FLAGS
+    if (OPENMP_FOUND AND DEFINED OpenMP_CXX_FLAGS)
+      set(OpenMP_CXX_FOUND OPENMP_FOUND)
+    endif()
+  endif()
+
+  if(NOT TARGET OpenMP::OpenMP_Fortran)
+    # CMake < 3.9
+    find_package(Threads REQUIRED)
+
+    add_library(OpenMP::OpenMP_Fortran IMPORTED INTERFACE)
+
+    set_property(TARGET OpenMP::OpenMP_Fortran
+      PROPERTY INTERFACE_COMPILE_OPTIONS ${OpenMP_Fortran_FLAGS})
+
+    # Only works if the same flag is passed to the linker; use CMake 3.9+ otherwise (Intel, AppleClang)
+    set_property(TARGET OpenMP::OpenMP_Fortran
+      PROPERTY INTERFACE_LINK_LIBRARIES ${OpenMP_Fortran_FLAGS} Threads::Threads)
+
+    # set OpenMP_Fortran_FLAGS
+    if (OPENMP_FOUND AND DEFINED OpenMP_Fortran_FLAGS)
+      set(OpenMP_Fortran_FOUND OPENMP_FOUND)
+    endif()
+  endif()
+
   if (OpenMP_CXX_FOUND)
     add_definitions(-DUSE_OPENMP)
     if (DEFINED ENV{OPENMP_SUFFIX})
@@ -30,6 +66,40 @@ endif()
 # MPI
 if (VS2DRT_BUILD_MPI)
   find_package(MPI REQUIRED)
+
+  # based on https://cliutils.gitlab.io/modern-cmake/chapters/packages/MPI.html
+  if (NOT TARGET MPI::MPI_CXX)
+    # CMake < 3.9
+    cmake_policy(SET CMP0004 OLD)
+    add_library(MPI::MPI_CXX IMPORTED INTERFACE)
+    cmake_policy(SET CMP0004 NEW)
+
+    set_property(TARGET MPI::MPI_CXX
+      PROPERTY INTERFACE_COMPILE_OPTIONS ${MPI_CXX_COMPILE_FLAGS})
+
+    set_property(TARGET MPI::MPI_CXX
+      PROPERTY INTERFACE_INCLUDE_DIRECTORIES "${MPI_CXX_INCLUDE_PATH}")
+
+    set_property(TARGET MPI::MPI_CXX
+      PROPERTY INTERFACE_LINK_LIBRARIES ${MPI_CXX_LINK_FLAGS} ${MPI_CXX_LIBRARIES})
+  endif()
+
+  if (NOT TARGET MPI::MPI_Fortran)
+    # CMake < 3.9
+    cmake_policy(SET CMP0004 OLD)
+    add_library(MPI::MPI_Fortran IMPORTED INTERFACE)
+    cmake_policy(SET CMP0004 NEW)
+
+    set_property(TARGET MPI::MPI_Fortran
+      PROPERTY INTERFACE_COMPILE_OPTIONS ${MPI_Fortran_COMPILE_FLAGS})
+
+    set_property(TARGET MPI::MPI_Fortran
+      PROPERTY INTERFACE_INCLUDE_DIRECTORIES "${MPI_Fortran_INCLUDE_PATH}")
+
+    set_property(TARGET MPI::MPI_Fortran
+      PROPERTY INTERFACE_LINK_LIBRARIES ${MPI_Fortran_LINK_FLAGS} ${MPI_Fortran_LIBRARIES})
+  endif()
+
   if (MPI_CXX_FOUND)
     add_definitions(-DUSE_MPI)
     include_directories(${MPI_CXX_INCLUDE_PATH})
