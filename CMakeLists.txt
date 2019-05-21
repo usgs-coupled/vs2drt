@@ -143,29 +143,6 @@ if(WIN32 AND NOT CMAKE_INSTALL_DOCDIR)
   set(CMAKE_INSTALL_DOCDIR "doc")
 endif()
 
-# database
-set(VS2DRT_DATABASE
-  database/Amm.dat
-  database/ColdChem.dat
-  database/core10.dat
-  database/frezchem.dat
-  database/iso.dat
-  database/llnl.dat
-  database/minteq.dat
-  database/minteq.v4.dat
-  database/phreeqc.dat
-  database/pitzer.dat
-  database/sit.dat
-  database/Tipping_Hurley.dat
-  database/wateq4f.dat)
-
-# override database directory on windows
-if(WIN32)
-  install(FILES ${VS2DRT_DATABASE} DESTINATION database)
-else()
-  install(FILES ${VS2DRT_DATABASE} DESTINATION ${CMAKE_INSTALL_DOCDIR}/database)
-endif()
-
 if (NOT WIN32)
   set(CPACK_GENERATOR TGZ)
 endif()
@@ -174,6 +151,7 @@ include(CPack)
 
 include(CTest)
 
+add_subdirectory(database)
 add_subdirectory(src)
 add_subdirectory(doc)
 add_subdirectory(examples)

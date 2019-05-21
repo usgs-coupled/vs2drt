@@ -6,8 +6,8 @@ AC_INIT([vs2drt], [1.0.0-10000], [rwhealy@usgs.gov])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_MACRO_DIR([m4])
 
-##AM_INIT_AUTOMAKE([-Wall -Werror foreign no-define subdir-objects tar-ustar])
-AM_INIT_AUTOMAKE([-Wall -Werror foreign no-define subdir-objects tar-pax])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign no-define subdir-objects tar-ustar])
+##AM_INIT_AUTOMAKE([-Wall -Werror foreign no-define subdir-objects tar-pax])
 AC_CONFIG_SRCDIR([src/vs2dt3_3_reactive_withoutArgus1.F90])
 
 # enable silent rules when available (automake 1.11 or later).

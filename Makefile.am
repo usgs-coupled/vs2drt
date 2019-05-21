@@ -1,4 +1,5 @@
 EXTRA_DIST=CMakeLists.txt \
+           database/CMakeLists.txt \
            src/CMakeLists.txt \
            src/PhreeqcRM/CMakeLists.txt
 
