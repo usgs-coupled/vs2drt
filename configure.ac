@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.61])
-AC_INIT([vs2drt], [1.0.0-10000], [rwhealy@usgs.gov])
+AC_INIT([vs2drt], [1.0.0], [rwhealy@usgs.gov])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -154,6 +154,7 @@ AC_SUBST(MPIEXEC_NUMPROC_FLAG)
 
 AC_CONFIG_FILES([
   Makefile
+  database/Makefile
   doc/Makefile
   examples/Makefile
 ])

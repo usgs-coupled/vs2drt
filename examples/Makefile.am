@@ -1,6 +1,6 @@
 EXTRA_DIST = CMakeLists.txt
 
-EXAMPLES_DIR = $(datadir)/doc/$(PACKAGE_TARNAME)-$(VERSION)/examples
+EXAMPLES_DIR = $(docdir)/examples
 
 # solute-energy/example1
 #

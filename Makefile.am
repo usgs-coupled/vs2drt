@@ -1,5 +1,5 @@
+AM_MAKEFLAGS="docdir=$(datadir)/doc/$(PACKAGE_TARNAME)-$(VERSION)"
 EXTRA_DIST=CMakeLists.txt \
-           database/CMakeLists.txt \
            src/CMakeLists.txt \
            src/PhreeqcRM/CMakeLists.txt
 
@@ -11,7 +11,7 @@ AM_CPPFLAGS=-I$(srcdir)/src/PhreeqcRM/src \
             -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/PhreeqcKeywords
 
 AM_FCFLAGS=-I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc
-SUBDIRS = doc examples
+SUBDIRS = database doc examples
 
 if BUILD_MPI
 bin_PROGRAMS = vs2drt-mpi
@@ -25,24 +25,6 @@ bin_PROGRAMS = vs2drt-ser
 endif #BUILD_OPENMP
 endif #BUILD_MPI 
 
-databasedir=$(datadir)/doc/$(PACKAGE_TARNAME)-$(VERSION)/database
-
-dist_database_DATA=$(DATABASE)
-
-DATABASE=\
-        database/Amm.dat\
-        database/ColdChem.dat\
-        database/core10.dat\
-        database/frezchem.dat\
-        database/iso.dat\
-        database/llnl.dat\
-        database/minteq.dat\
-        database/minteq.v4.dat\
-        database/phreeqc.dat\
-        database/pitzer.dat\
-        database/sit.dat\
-        database/Tipping_Hurley.dat\
-        database/wateq4f.dat
 
 VS2DRT_SRC=\
 	.depend\
