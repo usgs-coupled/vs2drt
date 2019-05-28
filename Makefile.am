@@ -1,6 +1,5 @@
+AM_MAKEFLAGS="docdir=$(datadir)/doc/$(PACKAGE_TARNAME)-$(VERSION)"
 EXTRA_DIST=CMakeLists.txt \
-           doc/CMakeLists.txt \
-           doc/VS2DRT_Input_Instructions.pdf \
            src/CMakeLists.txt \
            src/PhreeqcRM/CMakeLists.txt
 
@@ -12,6 +11,7 @@ AM_CPPFLAGS=-I$(srcdir)/src/PhreeqcRM/src \
             -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp/PhreeqcKeywords
 
 AM_FCFLAGS=-I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc
+SUBDIRS = database doc examples
 
 if BUILD_MPI
 bin_PROGRAMS = vs2drt-mpi
@@ -24,6 +24,7 @@ else
 bin_PROGRAMS = vs2drt-ser
 endif #BUILD_OPENMP
 endif #BUILD_MPI 
+
 
 VS2DRT_SRC=\
 	.depend\
