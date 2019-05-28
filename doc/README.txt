@@ -1,0 +1,475 @@
+	VS2DRT, Version @VERSION@, @VER_DATE@
+
+VS2DRT is a 2-dimensional, heat- and reactive-transport simulator 
+for saturated and unsaturated subsurface flow that is available for 
+Windows and Linux. VS2DRT simulates constant-density unsaturated or 
+saturated flow, heat transport, multicomponent transport, and a wide 
+range of equilibrium and kinetic chemical reactions. VS2DRT version 
+1.4 uses PhreeqcRM as the reaction module and uses standard PHREEQC 
+input definitions.
+
+
+TABLE OF CONTENTS
+
+   A. Distribution files
+   B. Compiling and installing the batch version for Windows
+   C. Compiling and installing the batch version for Linux
+   D. Running the batch versions of VS2DRT
+   E. Examples
+   F. Documentation
+   G. Contacts
+
+
+-----------------------------------------------------------------------------------
+A. Distribution files
+-----------------------------------------------------------------------------------
+
+The following distribution package of the batch version of VS2DRT is available
+for Windows and Linux:
+    
+vs2drt-@VERSION@-@REVISION@.tar.gz       Batch version for Linux or Windows for running VS2DRT 
+						                 models. Requires compilation using configure or CMake.
+
+-----------------------------------------------------------------------------------   
+B. Compiling, installing, and running the batch version for Windows
+-----------------------------------------------------------------------------------
+
+To compile the IPhreeqc library, you will need:
+
+	(a) CMake (build process manager)
+	(b) C++ compiler 
+	(c) Fortran 90 compiler
+
+B.1. Download and install CMake
+
+	CMake version 3.10 or later is required. CMake can be downloaded from http://www.cmake.org/. 
+	If you download the executable, CMake is installed when you execute it. 
+   
+B.2. Unzip the distribution file vs2drt-@VERSION@-@REVISION@.zip
+  
+	The directory phreeqc-@VERSION@-@REVISION@ is created when the files are
+	extracted; if this directory already exists, you may want to delete or rename it
+	before extracting the files.
+
+	The following directory structure is created (the contents of each directory are
+	shown to the right):
+   
+	vs2drt-@VERSION@-@REVISION@/
+	   README.txt              This file
+	   database/               Phreeqc database files.
+	   doc/                    Documentation.         
+	   examples/               VS2DRT examples input and output files           
+	   src/                    Source files
+	
+Notes: (a) A compiled executable is not included in this distribution.
+            
+       (b) It is recommended that no user files be kept in the installation directory
+           structure.
+   
+B.3.  Generate a Visual Studio solution
+ 
+	CMake has many options other than Visual Studio, but here we assume that you are
+	using some version of Visual Studio. On the first use of CMake, it may be
+	necessary to close all Visual Studio instances.
+ 	
+   Open CMake. 
+   
+      Fill in the top two lines:
+         Where is the source code: 
+            The top level directory (i.e. c:/vs2drt-@VERSION@-@REVISION@).
+         Where to build the binaries: 
+            A new directory. It is suggested that the name of the directory include
+	        the characteristics of the library that is built, including the VS
+	        version, 32/64 bit, and any parallelization, such as VS2012_x64_openmp.
+ 	
+   Click Configure. 
+      From the pulldown menu of the cmake-gui popup, select the 64-bit version 
+      for your Visual Studio. Normally, the default radio button should be 
+      sufficient. Click Finish.
+ 	
+   Selected CMake options:
+      (1) CMAKE_INSTALL_PREFIX--Sets the the install directory where the 
+          library and header files will be saved. Default is 
+		  C:/Program Files/vs2drt, but alternatively, the install 
+		  directory could be in the directory used for CMake.
+		  
+	  (2) VS2DRT_BUILD_MPI--Clicking this check box causes compilation with
+	      MPI (Message Passing Interface, multiprocessing) parallelization. 
+		  By default, no parallelization is used. If you check VS2DRT_BUILD_MPI, 
+		  you will need to have a version of MPI installed on your 
+          computer.	If you choose both openmp and mpi, an mpi version will be
+		  configured.
+		  
+	  (3) VS2DRT_BUILD_OPENMP--Clicking this check box causes compilation with
+	      OpenMP (multithreading) parallelization. By default, no parallelization is 
+		  used. If you check VS2DRT_BUILD_OPENMP, you will need to have a version of 
+		  OpenMP installed on your computer; it is often included as part of the 
+          compiler. If you choose both openmp and mpi, an mpi version will be
+		  configured.
+	  
+   Click Configure until the screen is not red. If the screen remains red, you will
+   have to deal with the CMake error messages.
+ 	
+   Click Generate.
+ 	
+   You should now have a Visual Studio solution file (.sln) in the directory chosen
+   for the binaries (second line of CMake screen). At any point, you can delete the
+   contents of the directory and start over. You can make solutions for different
+   Visual Studios, or different options in other directories.
+
+B.4. Compile and install VS2DRT
+ 
+   Open the Visual Studio solution in the build directory defined in CMake.
+ 	
+   The default configuration is "Debug". If you want a release version, 
+	  change the configuration to "Release".
+ 
+   Build ALL_BUILD. 
+      VS2DRT is compiled.
+ 
+   ????Build RUN_TESTS. Programs that test VS2DRT are compiled and run.
+ 	
+   Build INSTALL. 
+      The executables, PHREEQC database files, and documentation are installed in the
+      install directory selected in CMake (denoted "INSTALL" in the following
+      descriptions).
+
+B.5. Installed files
+
+	INSTALL is used here to represent the directory where the program has been 
+	installed.
+	
+   ?????INSTALL:
+      RELEASE.txt                           Release notes
+      README.txt                            this readme file
+      NOTICE.txt                            User rights notice
+ 
+   INSTALL/bin:
+      Subdirectory with executable(s)
+
+   INSTALL/database:
+      Amm.dat
+      ColdChem.dat
+      core10.dat
+      frezchem.dat
+      iso.dat
+      llnl.dat
+      minteq.dat
+      minteq.v4.dat
+      phreeqc.dat
+      pitzer.dat
+      sit.dat
+      Tipping_Hurley.dat
+      wateq4f.dat
+ 				
+   INSTALL/doc:
+      ???phreeqc3.pdf
+      ???PhreeqcI.pdf
+      ???VS2D.pdf
+      ???VS2DH.pdf
+      ???VS2DI.pdf
+      VS2DRT_Input_Instructions.pdf
+      ???VS2DT.pdf
+    
+   INSTALL/examples:
+      energy/
+            example1/
+            example2/
+            example3/
+      flow/
+            example1/
+            example2/
+            example3/
+      solute/
+            example1/
+            example2/
+            example3/
+            example4/
+            example5/
+      solute-energy/
+            example1/
+      tutorial1/
+      
+-----------------------------------------------------------------------------------   
+C. Compiling and installing the batch version for Linux
+-----------------------------------------------------------------------------------
+
+To compile the software, you will need:
+   make
+   C++ compiler
+   Fortran 90 compiler
+   CMake
+
+A Makefile for your system can be generated with CMake, and the Makefile can be used to
+compile, test???, and install the software.
+
+C.1. Extracting the files
+
+Follow the steps below to extract the files from a distribution tar file.
+
+   Steps in extracting files                            Explanation
+   ----------------------------------------             -----------------------------------
+   gunzip vs2drt-@VERSION@-@REVISION@.source.tar.gz     Uncompress the tar.gz file.
+ 
+   tar -xvpof vs2drt-@VERSION@-@REVISION@.source.tar    Extract files from the tar file.
+
+   The directory vs2drt-@VERSION@-@REVISION@ is created when the files are
+   extracted; if this directory already exists, you may want to delete or rename it
+   before extracting the files.
+   
+The following directory structure will be created (the contents of each 
+directory are shown to the right):
+
+	vs2drt-@VERSION@-@REVISION@/
+	   README.txt              This file
+	   database/               Phreeqc database files.
+	   doc/                    Documentation.         
+	   examples/               VS2DRT examples input and output files           
+	   src/                    Source files
+
+Notes: (a) A compiled executable is not included in the Linux distribution.
+            
+       (b) It is recommended that no user files be kept in the installation directory
+           structure.
+
+C.2.  Change directory to the directory that was extracted from the tar file.
+
+   cd vs2drt-@VERSION@-@REVISION@
+
+C.3.  Make a directory, for example, _openmp.
+    
+   mkdir _openmp
+
+C.4.  Change directory to _openmp.
+    
+   cd _openmp
+
+C.5.  Run CMake
+
+	Example for gcc and gfortran using 4 processors for compilation:
+
+CC=$(which gcc) CXX=$(which g++) FC=$(which gfortran) cmake -DCMAKE_INSTALL_PREFIX=./INSTALL -DVS2DRT_BUILD_OPENMP=ON ..
+make -j 4
+make install
+
+	Example for Intel C++ and Fortran using 4 processors for compilation:
+
+CC=$(which icc) CXX=$(which icpc) FC=$(which ifort) cmake -DCMAKE_INSTALL_PREFIX=./INSTALL -DVS2DRT_BUILD_OPENMP=ON ..
+make -j 4
+make install
+   
+   Most common options:
+      -DCMAKE_INSTALL_PREFIX=dir--specifies the directory for installation of the
+    		library. Default is /usr/local, $HOME would install	to your home directory.
+      -DVS2DRT_BUILD_OPENMP=ON--specifies that OpenMP (multithreading) is  used for 
+	        parallelization. (OpenMP must be included with your compiler.)
+      -DVS2DRT_BUILD_MPI=ON--specifies that MPI (multiprocessor) is used for parallelization.
+			MPI that is compatible with your compiler must be installed on your system. 
+      
+C.6.  Compile the vs2drt
+    
+   make [-j n]
+
+   Optionally, use -j n--where n is the number of compilations make runs in parallel.
+    
+C.7.???  Check that compiled version runs the test cases. 
+   Check may take several minutes.
+    
+      make check
+    
+
+C.8 Install vs2drt
+ 
+	make install
+
+C.9. Installed files
+
+	INSTALL is used here to represent the directory where the program has been 
+	installed.
+	
+   ?????INSTALL:
+      RELEASE.txt                           Release notes
+      README.txt                            this readme file
+      NOTICE.txt                            User rights notice
+ 
+   INSTALL/bin:                             Subdirectory with executable(s)
+	vs2drt, vs2drt_openmp, or vs2drt_mpi
+
+   INSTALL/lib64:                           Subdirectory with libraries
+	liblibvs2drt.so  
+	libPhreeqcRM.so
+
+   INSTALL/share/doc/vs2drt/database:
+      Amm.dat
+      ColdChem.dat
+      core10.dat
+      frezchem.dat
+      iso.dat
+      llnl.dat
+      minteq.dat
+      minteq.v4.dat
+      phreeqc.dat
+      pitzer.dat
+      sit.dat
+      Tipping_Hurley.dat
+      wateq4f.dat
+ 				
+   INSTALL/share/doc/vs2drt/doc:
+	  ???phreeqc3.pdf
+      ???PhreeqcI.pdf
+      ???VS2D.pdf
+      ???VS2DH.pdf
+      ???VS2DI.pdf
+      VS2DRT_Input_Instructions.pdf
+      ???VS2DT.pdf
+    
+   INSTALL/share/doc/vs2drt/examples:
+      energy/
+            example1/
+            example2/
+            example3/
+      flow/
+            example1/
+            example2/
+            example3/
+      solute/
+            example1/
+            example2/
+            example3/
+            example4/
+            example5/
+      solute-energy/
+            example1/
+      tutorial1/
+	  
+----------------------------------------------------------------------------------- 
+D. Running the batch versions of VS2DRT 
+----------------------------------------------------------------------------------- 
+
+	For reactive flow and transport, VS2DRT requires three files: (1) 
+	vs2drt.dat, which defines grid, flow and transport parameters, and 
+	index numbers of initial and bounday conditions; (2) a PHREEQC input 
+	file, which defines reactions and solution compositions of initial 
+	conditions and boundary conditions identified by index numbers; and 
+	(3) a thermodynamic database file. The PHREEQC input file and the 
+	database to be used are defined in the vs2drt.dat file. Index numbers 
+	are used in the vs2drt.dat file to refer to solutions and reactions 
+	defined in the PHREEQC input file. For example, the grid might be 
+	defined to have SOLUTION 2 as the initial condition, where SOLUTION 2 
+	is defined in the PHREEQC input file. 	
+
+	For simulations without chemistry--flow or flow and heat--only the 
+	vs2drt.dat file	is needed. 
+
+	The VS2DRT batch versions are run by using a command prompt window. 
+	Change directories to the directory containing the input files and 
+	invoke the program. 
+
+Nonparallel:
+	INSTALL/bin/vs2drt.exe   	
+
+OpenMP: 
+
+	To run the OpenMP version using the file names shown in this README, the 
+	executable would be found as follows: 
+
+	INSTALL/bin/vs2drt_openmp.exe [processes]  
+
+	The number of threads to be used in parallel processing may
+	be defined as an optional argument. 
+
+MPI:
+
+	To run the MPI version of VS2DRT, it is necessary to use the mpiexec command at a 
+	command prompt. A simple example of running the MPI version of VS2DRT follows:
+
+    mpiexec -n 4 INSTALL/bin/vs2drt_mpi.exe
+      
+    where 4 is the number of processes to use for parallel processing.
+
+----------------------------------------------------------------------------------- 
+E. Examples
+----------------------------------------------------------------------------------- 
+
+Example problems are included in the examples directory of the installation.  The
+examples are segregated into directories for flow (flow only), energy (flow and heat),
+solute (flow and solute), and solute-energy (flow, heat, and solute). In addition,
+there is another example in the directory tutorial1.
+
+-----------------------------------------------------------------------------------
+F. Documentation
+-----------------------------------------------------------------------------------
+
+VS2DRT and PHREEQC:
+   
+Charlton, S.R., and Parkhurst, D.L. 2002. PHREEQCI—A graphical user interface to the 
+geochemical model PHREEQC. U.S. Geological Survey Fact Sheet 031–02. An electronic 
+version of this report can be downloaded from: 
+https://pubs.er.usgs.gov/publication/fs03102 
+ 
+Charlton, S.R., and Parkhurst, D.L., 2011, Modules based on the geochemical model PHREEQC for 
+use in scripting and programming languages: Computers & Geosciences, v. 37, p. 1653-1663.
+
+Haile, Sosina S. 2013. VS2DRT: Variable saturated two dimensional reactive transport 
+modeling in the vadose zone. (Doctoral dissertation) Freiberg Online Geoscience 34: 1–152.
+
+Healy, R.W., 1990, Simulation of solute transport in variably saturated porous media with 
+supplemental information on modifications to the U.S. Geological Survey's Computer Program 
+VS2D: U.S. Geological Survey Water-Resources Investigations Report 90-4025, 125 p. An 
+electronic version of this report can be downloaded from 
+http://pubs.er.usgs.gov/pubs/wri/wri904025
+ 
+Healy, R.W., and Ronan, A.D., 1996, Documentation of computer program VS2DH for simulation 
+of energy transport in variably saturated porous media--modification of the U.S. 
+Geological Survey's computer program VS2DT: U.S. Geological Survey Water-Resources 
+Investigations Report 96-4230, 36 p. An electronic version of this report can be 
+downloaded from http://pubs.er.usgs.gov/pubs/wri/wri964230
+ 
+Hsieh, P.A., Wingle, William, and Healy, R.W., 1999, VS2DI--a graphical software package 
+for simulating fluid flow and solute or energy transport in variably saturated porous 
+media: U.S. Geological Survey Water-Resources Investigations Report 99-4130, 16 p. An 
+electronic version of this report can be downloaded from 
+http://pubs.er.usgs.gov/pubs/wri/wri994130
+
+Lappala, E.G., Healy, R.W., and Weeks, E.P., 1983, Documentation of computer program VS2D 
+to solve the equations of fluid flow in variably saturated porous media: U.S. Geological 
+Survey Water-Resources Investigations Report 83-4099, 184 p. An electronic version of 
+this report can be downloaded from http://pubs.er.usgs.gov/pubs/wri/wri834099
+
+Parkhurst, D.L., and Appelo, C.A.J., 1999, User's guide to PHREEQC (Version 2)-- A 
+computer program for speciation, batch-reaction, one-dimensional transport, and inverse 
+geochemical calculations: U.S. Geological Survey Water-Resources Investigations Report 
+99-4259, 312 p. http://pubs.er.usgs.gov/publication/wri994259.
+
+Parkhurst, D.L., and Appelo, C.A.J. 2013. Description of input and examples for PHREEQC 
+Version 3—a computer program for speciation, batch-reaction, one-dimensional transport, 
+and inverse geochemical calculations. U.S. Geological Survey Techniques and Methods 
+6-A43. An electronic version of this report can be downloaded from: 
+https://pubs.er.usgs.gov/publication/tm6A43
+ 
+Parkhurst, D.L., and Wissmeier, L. 2015. PhreeqcRM: A reaction module for transport 
+simulators based on the geochemical model PHREEQC. Advances in Water Resources 83: 
+176–189. DOI: 10.1016/j.advwatres.2015.06.001.
+
+Isotopes:
+
+The following two reports document the theory and implementation of isotopes in 
+PHREEQC. Portable Document Format (PDF) of Thorstenson and Parkhurst (2002) is included 
+in the doc subdirectory of the PHREEQC program distribution.
+
+Thorstenson, D.C., and Parkhurst, D.L., 2002, Calculation of individual isotope 
+equilibrium constants for implementation in geochemical models: U.S. Geological 
+Survey Water-Resources Investigations Report 02-4172, 129 p. 
+http://pubs.er.usgs.gov/publication/wri024172.
+
+Thorstenson, D.C., and Parkhurst, D.L., 2004, Calculation of individual isotope 
+equilibrium constants for geochemical reactions: Geochimica et Cosmochimica Acta, v. 
+68, no. 11, p. 2449-2465.
+   
+----------------------------------------------------------------------------------- 
+G. Contacts
+----------------------------------------------------------------------------------- 
+
+Hopefully this is enough to get you started. Please report bugs (rwhealy@usgs.gov, 
+dlpark@usgs.gov, or h2osoft@usgs.gov) and we will try to fix any problems as soon as possible. 
+Any other comments are appreciated.
