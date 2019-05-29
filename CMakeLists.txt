@@ -149,7 +149,7 @@ endif()
 
 include(CPack)
 
-include(CTest)
+#include(CTest)
 
 add_subdirectory(database)
 add_subdirectory(src)
