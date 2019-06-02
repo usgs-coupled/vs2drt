@@ -1,5 +1,15 @@
+SET(vs2drt_DOC
+VS2DRT_Input_Instructions.pdf
+phreeqc3.pdf
+PhreeqcI.pdf
+VS2DH.pdf
+VS2DI.pdf
+VS2D.pdf
+VS2DT.pdf
+)
+
 if (WIN32)
-  install(FILES VS2DRT_Input_Instructions.pdf DESTINATION doc)
+  install(FILES ${vs2drt_DOC} DESTINATION doc)
 else()
-  install(FILES VS2DRT_Input_Instructions.pdf DESTINATION ${CMAKE_INSTALL_DOCDIR}/doc)
+  install(FILES ${vs2drt_DOC} DESTINATION ${CMAKE_INSTALL_DOCDIR}/doc)
 endif()
