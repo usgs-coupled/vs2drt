@@ -949,7 +949,7 @@
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                    FLUID FROM BOUNDARY CHANGE --      1.41265E-02         0.00000E+00         0.00000E+00    +
   +                              CHANGE IN FLUID STORED IN DOMAIN --      3.27141E-02         3.23374E-04         2.69232E-06    +
-  +                                          FLUID VOLUME BALANCE --     -3.58801E-13        -4.26363E-16        -3.54977E-18    +
+  +                                          FLUID VOLUME BALANCE --     -3.62660E-13        -3.70580E-16        -3.08535E-18    +
   +                                                                                                                              +
   +                                                                                                                              +
   +                                   ENERGY MASS BALANCE                                                                        +
@@ -965,7 +965,7 @@
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                   ENERGY FROM BOUNDARY CHANGE --      1.25729E+06         0.00000E+00         0.00000E+00    +
   +                             CHANGE IN ENERGY STORED IN DOMAIN --      1.28836E+06        -3.89275E+03        -3.24099E+01    +
-  +                                           ENERGY MASS BALANCE --      1.11470E-06         2.18279E-11         1.81733E-13    +
+  +                                           ENERGY MASS BALANCE --     -9.06002E-08         2.31230E-08         1.92515E-10    +
   +                                                                                                                              +
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  TIME STEP        13  TIME =   0.374413E+04  NIT =     6  NIT1 =     2  NIT3 =     2  NIS1 =     0
@@ -1972,7 +1972,7 @@
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                    FLUID FROM BOUNDARY CHANGE --      1.41265E-02         0.00000E+00         0.00000E+00    +
   +                              CHANGE IN FLUID STORED IN DOMAIN --     -9.79995E-02        -1.87633E-05        -4.88529E-07    +
-  +                                          FLUID VOLUME BALANCE --      9.80765E-12         1.21458E-15         3.16235E-17    +
+  +                                          FLUID VOLUME BALANCE --      9.91689E-12         2.04860E-16         5.33383E-18    +
   +                                                                                                                              +
   +                                                                                                                              +
   +                                   ENERGY MASS BALANCE                                                                        +
@@ -1988,6 +1988,6 @@
   +                                      TOTAL EVAPOTRANSPIRATION --      0.00000E+00         0.00000E+00         0.00000E+00    +
   +                                   ENERGY FROM BOUNDARY CHANGE --      1.25729E+06         0.00000E+00         0.00000E+00    +
   +                             CHANGE IN ENERGY STORED IN DOMAIN --     -4.40136E+07        -4.82105E+03        -1.25523E+02    +
-  +                                           ENERGY MASS BALANCE --      2.42227E-06        -1.44346E-08        -3.75826E-10    +
+  +                                           ENERGY MASS BALANCE --      2.60169E-06         6.22276E-09         1.62019E-10    +
   +                                                                                                                              +
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

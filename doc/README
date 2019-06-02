@@ -101,18 +101,20 @@ B.3.  Generate a Visual Studio solution
 		  directory could be in the directory used for CMake.
 		  
 	  (2) VS2DRT_BUILD_MPI--Clicking this check box causes compilation with
-	      MPI (Message Passing Interface, multiprocessing) parallelization. 
-		  By default, no parallelization is used. If you check VS2DRT_BUILD_MPI, 
+	      MPI (Message Passing Interface, multiprocessing) parallelization for
+		  the chemistry calculations; chemistry calculations for cells are run 
+		  in parallel. If you check VS2DRT_BUILD_MPI, 
 		  you will need to have a version of MPI installed on your 
-          computer.	If you choose both openmp and mpi, an mpi version will be
-		  configured.
+          computer.	By default, no parallelization is used. 
 		  
 	  (3) VS2DRT_BUILD_OPENMP--Clicking this check box causes compilation with
-	      OpenMP (multithreading) parallelization. By default, no parallelization is 
-		  used. If you check VS2DRT_BUILD_OPENMP, you will need to have a version of 
-		  OpenMP installed on your computer; it is often included as part of the 
-          compiler. If you choose both openmp and mpi, an mpi version will be
-		  configured.
+		  OpenMP (multithreading) parallelization. The tranport calculations for
+		  the elements will be run in parallel. The chemistry will be run in parallel 
+		  by MPI, if VS2DRT_BUILD_MPI is selected, or by OpenMP if VS2DRT_BUILD_MPI 
+		  is not selected (and VS2DRT_BUILD_OPENMP is selected). By default, no 
+		  parallelization is used. If you check VS2DRT_BUILD_OPENMP, you will need 
+		  to have a version of OpenMP installed on your computer; it is often 
+		  included as part of the compiler. By default, no parallelization is used.
 	  
    Click Configure until the screen is not red. If the screen remains red, you will
    have to deal with the CMake error messages.
@@ -267,28 +269,28 @@ make install
    Most common options:
       -DCMAKE_INSTALL_PREFIX=dir--specifies the directory for installation of the
     		library. Default is /usr/local, $HOME would install	to your home directory.
+      -DVS2DRT_BUILD_MPI=ON--specifies that MPI (multiprocessor) is used for parallelization
+	        of the chemistry calculations. A version of MPI that is compatible with your 
+			compiler must be installed on your system.
       -DVS2DRT_BUILD_OPENMP=ON--specifies that OpenMP (multithreading) is  used for 
-	        parallelization. (OpenMP must be included with your compiler.)
-      -DVS2DRT_BUILD_MPI=ON--specifies that MPI (multiprocessor) is used for parallelization.
-			MPI that is compatible with your compiler must be installed on your system. 
-      
+	        parallelization of the transport calculations; transport of the elements
+			is performed in parallel. If -DVS2DRT_BUILD_MPI is defined, then cell 
+			chemistry calculations will be parallelized by MPI; if -DVS2DRT_BUILD_MPI
+			is not defined (and -DVS2DRT_BUILD_OPENMP is defined), then cell chemistry
+			calculations will be parallelized by OpenMP. (OpenMP must be included 
+			with your compiler.) 
+        
 C.6.  Compile the vs2drt
     
    make [-j n]
 
    Optionally, use -j n--where n is the number of compilations make runs in parallel.
-    
-C.7.???  Check that compiled version runs the test cases. 
-   Check may take several minutes.
-    
-      make check
-    
 
-C.8 Install vs2drt
+C.7. Install vs2drt
  
 	make install
 
-C.9. Installed files
+C.8. Installed files
 
 	INSTALL is used here to represent the directory where the program has been 
 	installed.
