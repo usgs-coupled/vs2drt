@@ -27,8 +27,8 @@ A. Distribution files
 The following distribution package of the batch version of VS2DRT is available
 for Windows and Linux:
     
-vs2drt-@VERSION@-@REVISION@.tar.gz       Batch version for Linux or Windows for running VS2DRT 
-						                 models. Requires compilation using configure or CMake.
+vs2drt-@VERSION@-@REVISION@.tar.gz       Batch version for Linux or Windows VS2DRT. 
+                                         Requires compilation using CMake.
 
 -----------------------------------------------------------------------------------   
 B. Compiling, installing, and running the batch version for Windows
@@ -45,8 +45,14 @@ B.1. Download and install CMake
 	CMake version 3.10 or later is required. CMake can be downloaded from http://www.cmake.org/. 
 	If you download the executable, CMake is installed when you execute it. 
    
-B.2. Unzip the distribution file vs2drt-@VERSION@-@REVISION@.zip
+B.2. Unzip the distribution file vs2drt-@VERSION@-@REVISION@.tar.gz
   
+	There are several ways to uncompress tar.gz files on Windows, but you may need
+	to download some software. 7-zip is a free utility that	can be used. A git 
+	bash shell will have gunzip and tar. A set of tools	GnuWin32 can also be used. 
+	You will need to uncompress the file to make a .tar file, and then extract 
+	file from the .tar file. 
+	
 	The directory phreeqc-@VERSION@-@REVISION@ is created when the files are
 	extracted; if this directory already exists, you may want to delete or rename it
 	before extracting the files.
@@ -55,11 +61,12 @@ B.2. Unzip the distribution file vs2drt-@VERSION@-@REVISION@.zip
 	shown to the right):
    
 	vs2drt-@VERSION@-@REVISION@/
-	   README.txt              This file
+	   CMakeFiles/             Files used by CMake
 	   database/               Phreeqc database files.
 	   doc/                    Documentation.         
 	   examples/               VS2DRT examples input and output files           
 	   src/                    Source files
+	   Testing/                Not currently used
 	
 Notes: (a) A compiled executable is not included in this distribution.
             
@@ -126,8 +133,6 @@ B.4. Compile and install VS2DRT
  
    Build ALL_BUILD. 
       VS2DRT is compiled.
- 
-   ????Build RUN_TESTS. Programs that test VS2DRT are compiled and run.
  	
    Build INSTALL. 
       The executables, PHREEQC database files, and documentation are installed in the
@@ -139,13 +144,13 @@ B.5. Installed files
 	INSTALL is used here to represent the directory where the program has been 
 	installed.
 	
-   ?????INSTALL:
-      RELEASE.txt                           Release notes
-      README.txt                            this readme file
-      NOTICE.txt                            User rights notice
+   INSTALL:
+      ???RELEASE.txt                           Release notes
+      ???README                                this readme file
+      ???NOTICE.txt                            User rights notice
  
-   INSTALL/bin:
-      Subdirectory with executable(s)
+   INSTALL/bin:                             Subdirectory with executable(s)
+	  vs2drt.exe, vs2drt_openmp.exe, or vs2drt_mpi.exe
 
    INSTALL/database:
       Amm.dat
@@ -163,13 +168,14 @@ B.5. Installed files
       wateq4f.dat
  				
    INSTALL/doc:
-      ???phreeqc3.pdf
-      ???PhreeqcI.pdf
-      ???VS2D.pdf
-      ???VS2DH.pdf
-      ???VS2DI.pdf
+      ???README (this file)
+      phreeqc3.pdf
+      PhreeqcI.pdf
+      VS2D.pdf
+      VS2DH.pdf
+      VS2DI.pdf
       VS2DRT_Input_Instructions.pdf
-      ???VS2DT.pdf
+      VS2DT.pdf
     
    INSTALL/examples:
       energy/
