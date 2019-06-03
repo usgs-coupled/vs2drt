@@ -1,0 +1,27 @@
+VS2DRT RELEASE NOTES
+
+Version @VERSION@, @VER_DATE@
+
+June 2, 2019
+   Revised CMake for the compilation of the batch version for Linux or Windows. 
+   Previously the logic for using both MPI and OpenMP was not correct. 
+   Now, if only the MPI option is specified, only the chemistry calculations 
+   are parallelized. If only the OpenMP option is specified, then chemistry 
+   and transport are parallelized with OpenMP. If both MPI and OpenMP are 
+   specified, then the chemistry is parallelized with MPI and the transport 
+   calculations are parallelized with OpenMP.
+   
+June 1, 2019
+   Changed output to screen to be in correct order for the Linux batch version. 
+   Previously, Linux screen output could be jumbled because of buffering.
+   
+May 16, 2019
+    Updated batch version of VS2DRT for Windows or Linux. The .tar.gz distribution 
+	file has source	code, documentation, and examples, but no executables. The 
+	program can be compiled (on Linux or Windows) with CMake (3.10 or newer).
+	There are CMake options for parallization with OpenMP and (or) MPI.
+   
+March 27, 2019
+    Corrected flux output. Parallelization had caused the flux calculations to 
+	be erroneous. Now, the proper coefficients are saved to be able to calculate
+	correct fluxes in the output (vs2drt.out).
