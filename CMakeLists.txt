@@ -6,10 +6,10 @@ project(vs2drt C CXX Fortran)
 option(VS2DRT_BUILD_OPENMP "Build OpenMP configuration" "OFF")
 
 # check for MPI
-option(VS2DRT_BUILD_MPI "Build MPI configuration (If Enabled, overrides OpenMP option)" "OFF")
+option(VS2DRT_BUILD_MPI "Build MPI configuration" "OFF")
 
 # OpenMP
-if (VS2DRT_BUILD_OPENMP AND (NOT VS2DRT_BUILD_MPI))
+if (VS2DRT_BUILD_OPENMP)
   find_package(OpenMP REQUIRED)
 
   # based on https://cliutils.gitlab.io/modern-cmake/chapters/packages/OpenMP.html
@@ -113,6 +113,11 @@ if (VS2DRT_BUILD_MPI)
 else()
   remove_definitions(-DUSE_MPI)
   set(PHREEQCRM_BUILD_MPI OFF CACHE INTERNAL "Build MPI configuration" FORCE)
+endif()
+
+if (VS2DRT_BUILD_OPENMP AND VS2DRT_BUILD_MPI)
+  remove_definitions(-DUSE_OPENMP)  # PhreeqcRM can only handle VS2DRT_BUILD_OPENMP or VS2DRT_BUILD_MPI
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -DUSE_OPENMP")
 endif()
 
 # CPACK

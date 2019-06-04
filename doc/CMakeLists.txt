@@ -1,11 +1,13 @@
 SET(vs2drt_DOC
-VS2DRT_Input_Instructions.pdf
-phreeqc3.pdf
+NOTICE.TXT
 PhreeqcI.pdf
+README
+VS2D.pdf
 VS2DH.pdf
 VS2DI.pdf
-VS2D.pdf
+VS2DRT_Input_Instructions.pdf
 VS2DT.pdf
+phreeqc3.pdf
 )
 
 if (WIN32)
