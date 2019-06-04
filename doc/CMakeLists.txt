@@ -2,6 +2,7 @@ SET(vs2drt_DOC
 NOTICE.TXT
 PhreeqcI.pdf
 README
+RELEASE.txt
 VS2D.pdf
 VS2DH.pdf
 VS2DI.pdf
