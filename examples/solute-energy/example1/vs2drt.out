@@ -2097,246 +2097,246 @@ Na
    130     00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010
    131     00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
    132     00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
- TIME STEP         1  TIME =   0.120000E-02  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP         2  TIME =   0.184317E-02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP         3  TIME =   0.261497E-02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP         4  TIME =   0.354113E-02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP         1  TIME =   0.120000E-02  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP         2  TIME =   0.184317E-02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP         3  TIME =   0.261497E-02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP         4  TIME =   0.354113E-02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER        5
      ELAPSED TIME =    4.65253E-03 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.111140E-03
- TIME STEP         5  TIME =   0.365227E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP         6  TIME =   0.378564E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP         7  TIME =   0.394568E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP         8  TIME =   0.413773E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP         9  TIME =   0.436819E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        10  TIME =   0.464474E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        11  TIME =   0.497660E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        12  TIME =   0.537483E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        13  TIME =   0.585271E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        14  TIME =   0.642617E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        15  TIME =   0.711432E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        16  TIME =   0.794009E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        17  TIME =   0.893102E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        18  TIME =   0.101201E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        19  TIME =   0.115471E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP         5  TIME =   0.365227E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP         6  TIME =   0.378564E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP         7  TIME =   0.394568E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP         8  TIME =   0.413773E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP         9  TIME =   0.436819E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        10  TIME =   0.464474E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        11  TIME =   0.497660E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        12  TIME =   0.537483E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        13  TIME =   0.585271E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        14  TIME =   0.642617E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        15  TIME =   0.711432E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        16  TIME =   0.794009E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        17  TIME =   0.893102E-02  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        18  TIME =   0.101201E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        19  TIME =   0.115471E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER       20
      ELAPSED TIME =    1.32594E-02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.171233E-03
- TIME STEP        20  TIME =   0.117183E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        21  TIME =   0.119238E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        22  TIME =   0.121704E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        23  TIME =   0.124663E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        24  TIME =   0.128213E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        25  TIME =   0.132474E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        26  TIME =   0.137587E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        27  TIME =   0.143723E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        28  TIME =   0.151085E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        29  TIME =   0.159921E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        30  TIME =   0.170523E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        31  TIME =   0.183246E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        32  TIME =   0.198513E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP        20  TIME =   0.117183E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        21  TIME =   0.119238E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        22  TIME =   0.121704E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        23  TIME =   0.124663E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        24  TIME =   0.128213E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        25  TIME =   0.132474E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        26  TIME =   0.137587E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        27  TIME =   0.143723E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        28  TIME =   0.151085E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        29  TIME =   0.159921E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        30  TIME =   0.170523E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        31  TIME =   0.183246E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        32  TIME =   0.198513E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER       33
      ELAPSED TIME =    2.16834E-02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.183208E-03
- TIME STEP        33  TIME =   0.200345E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        34  TIME =   0.202544E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        35  TIME =   0.205182E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        36  TIME =   0.208348E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        37  TIME =   0.212147E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        38  TIME =   0.216705E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        39  TIME =   0.222176E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        40  TIME =   0.228741E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        41  TIME =   0.236618E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        42  TIME =   0.246071E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        43  TIME =   0.257415E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        44  TIME =   0.271027E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        45  TIME =   0.287362E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        46  TIME =   0.306964E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        47  TIME =   0.330487E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        48  TIME =   0.358714E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        49  TIME =   0.392586E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        50  TIME =   0.433232E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP        33  TIME =   0.200345E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        34  TIME =   0.202544E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        35  TIME =   0.205182E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        36  TIME =   0.208348E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        37  TIME =   0.212147E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        38  TIME =   0.216705E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        39  TIME =   0.222176E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        40  TIME =   0.228741E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        41  TIME =   0.236618E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        42  TIME =   0.246071E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        43  TIME =   0.257415E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        44  TIME =   0.271027E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        45  TIME =   0.287362E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        46  TIME =   0.306964E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        47  TIME =   0.330487E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        48  TIME =   0.358714E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        49  TIME =   0.392586E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        50  TIME =   0.433232E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER       51
      ELAPSED TIME =    4.82008E-02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.487760E-03
- TIME STEP        51  TIME =   0.438110E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        52  TIME =   0.443963E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        53  TIME =   0.450987E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        54  TIME =   0.459415E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        55  TIME =   0.469530E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        56  TIME =   0.481667E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        57  TIME =   0.496231E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        58  TIME =   0.513708E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        59  TIME =   0.534681E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        60  TIME =   0.559848E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        61  TIME =   0.590049E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        62  TIME =   0.626290E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        63  TIME =   0.669779E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        64  TIME =   0.721966E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        65  TIME =   0.784591E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        66  TIME =   0.859740E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP        51  TIME =   0.438110E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        52  TIME =   0.443963E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        53  TIME =   0.450987E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        54  TIME =   0.459415E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        55  TIME =   0.469530E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        56  TIME =   0.481667E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        57  TIME =   0.496231E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        58  TIME =   0.513708E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        59  TIME =   0.534681E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        60  TIME =   0.559848E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        61  TIME =   0.590049E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        62  TIME =   0.626290E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        63  TIME =   0.669779E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        64  TIME =   0.721966E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        65  TIME =   0.784591E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        66  TIME =   0.859740E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER       67
      ELAPSED TIME =    9.49919E-02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.901791E-03
- TIME STEP        67  TIME =   0.868758E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        68  TIME =   0.879579E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        69  TIME =   0.892565E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        70  TIME =   0.908148E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        71  TIME =   0.926848E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        72  TIME =   0.949287E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        73  TIME =   0.976214E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        74  TIME =   0.100853E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        75  TIME =   0.104730E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        76  TIME =   0.109383E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        77  TIME =   0.114967E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        78  TIME =   0.121667E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        79  TIME =   0.129708E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        80  TIME =   0.139356E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP        67  TIME =   0.868758E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        68  TIME =   0.879579E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        69  TIME =   0.892565E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        70  TIME =   0.908148E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        71  TIME =   0.926848E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        72  TIME =   0.949287E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        73  TIME =   0.976214E-01  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        74  TIME =   0.100853E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        75  TIME =   0.104730E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        76  TIME =   0.109383E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        77  TIME =   0.114967E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        78  TIME =   0.121667E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        79  TIME =   0.129708E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        80  TIME =   0.139356E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER       81
      ELAPSED TIME =    1.50935E-01 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.115783E-02
- TIME STEP        81  TIME =   0.140514E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        82  TIME =   0.141904E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        83  TIME =   0.143571E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        84  TIME =   0.145572E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        85  TIME =   0.147972E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        86  TIME =   0.150853E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        87  TIME =   0.154311E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        88  TIME =   0.158459E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        89  TIME =   0.163438E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        90  TIME =   0.169412E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        91  TIME =   0.176581E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        92  TIME =   0.185184E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        93  TIME =   0.195507E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        94  TIME =   0.207895E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        95  TIME =   0.222760E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        96  TIME =   0.240599E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        97  TIME =   0.262005E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        98  TIME =   0.287693E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP        99  TIME =   0.318518E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       100  TIME =   0.355509E+00  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       101  TIME =   0.399897E+00  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       102  TIME =   0.453163E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       103  TIME =   0.517082E+00  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       104  TIME =   0.593785E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       105  TIME =   0.685828E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       106  TIME =   0.796280E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       107  TIME =   0.928823E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       108  TIME =   0.108787E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       109  TIME =   0.127874E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       110  TIME =   0.150777E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       111  TIME =   0.178261E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       112  TIME =   0.211242E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       113  TIME =   0.250819E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       114  TIME =   0.298311E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       115  TIME =   0.355302E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       116  TIME =   0.423691E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       117  TIME =   0.505758E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       118  TIME =   0.604239E+01  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       119  TIME =   0.722415E+01  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       120  TIME =   0.864227E+01  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       121  TIME =   0.103440E+02  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       122  TIME =   0.123861E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       123  TIME =   0.148366E+02  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       124  TIME =   0.177772E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       125  TIME =   0.213059E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       126  TIME =   0.255404E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       127  TIME =   0.306218E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       128  TIME =   0.367194E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       129  TIME =   0.440366E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     1
+ TIME STEP        81  TIME =   0.140514E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        82  TIME =   0.141904E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        83  TIME =   0.143571E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        84  TIME =   0.145572E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        85  TIME =   0.147972E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        86  TIME =   0.150853E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        87  TIME =   0.154311E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        88  TIME =   0.158459E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        89  TIME =   0.163438E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        90  TIME =   0.169412E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        91  TIME =   0.176581E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        92  TIME =   0.185184E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        93  TIME =   0.195507E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        94  TIME =   0.207895E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        95  TIME =   0.222760E+00  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        96  TIME =   0.240599E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        97  TIME =   0.262005E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        98  TIME =   0.287693E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP        99  TIME =   0.318518E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       100  TIME =   0.355509E+00  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       101  TIME =   0.399897E+00  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       102  TIME =   0.453163E+00  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       103  TIME =   0.517082E+00  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       104  TIME =   0.593785E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       105  TIME =   0.685828E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       106  TIME =   0.796280E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       107  TIME =   0.928823E+00  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       108  TIME =   0.108787E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       109  TIME =   0.127874E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       110  TIME =   0.150777E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       111  TIME =   0.178261E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       112  TIME =   0.211242E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       113  TIME =   0.250819E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       114  TIME =   0.298311E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       115  TIME =   0.355302E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       116  TIME =   0.423691E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       117  TIME =   0.505758E+01  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       118  TIME =   0.604239E+01  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       119  TIME =   0.722415E+01  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       120  TIME =   0.864227E+01  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       121  TIME =   0.103440E+02  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       122  TIME =   0.123861E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       123  TIME =   0.148366E+02  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       124  TIME =   0.177772E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       125  TIME =   0.213059E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       126  TIME =   0.255404E+02  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       127  TIME =   0.306218E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       128  TIME =   0.367194E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       129  TIME =   0.440366E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER      130
      ELAPSED TIME =    5.28172E+01 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.878060E+00
- TIME STEP       130  TIME =   0.449146E+02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       131  TIME =   0.459683E+02  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       132  TIME =   0.472327E+02  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       133  TIME =   0.487500E+02  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       134  TIME =   0.505708E+02  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       135  TIME =   0.527557E+02  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       136  TIME =   0.553775E+02  NIT =     7  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       137  TIME =   0.585238E+02  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       138  TIME =   0.622993E+02  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       139  TIME =   0.668299E+02  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       140  TIME =   0.722666E+02  NIT =     4  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       141  TIME =   0.787906E+02  NIT =     4  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       142  TIME =   0.866195E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       143  TIME =   0.960142E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       144  TIME =   0.107288E+03  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     1
+ TIME STEP       130  TIME =   0.449146E+02  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       131  TIME =   0.459683E+02  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       132  TIME =   0.472327E+02  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       133  TIME =   0.487500E+02  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       134  TIME =   0.505708E+02  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       135  TIME =   0.527557E+02  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       136  TIME =   0.553775E+02  NIT =     7  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       137  TIME =   0.585238E+02  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       138  TIME =   0.622993E+02  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       139  TIME =   0.668299E+02  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       140  TIME =   0.722666E+02  NIT =     4  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       141  TIME =   0.787906E+02  NIT =     4  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       142  TIME =   0.866195E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       143  TIME =   0.960142E+02  NIT =     6  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       144  TIME =   0.107288E+03  NIT =     5  NIT1 =     4  NIT3 =     4  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER      145
      ELAPSED TIME =    1.20816E+02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.135283E+01
- TIME STEP       145  TIME =   0.108641E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       146  TIME =   0.110264E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       147  TIME =   0.112212E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       148  TIME =   0.114550E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       149  TIME =   0.117355E+03  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     2
- TIME STEP       150  TIME =   0.120721E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       151  TIME =   0.124761E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       152  TIME =   0.129608E+03  NIT =     7  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       153  TIME =   0.135425E+03  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       154  TIME =   0.142405E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       155  TIME =   0.150782E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       156  TIME =   0.160833E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
+ TIME STEP       145  TIME =   0.108641E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       146  TIME =   0.110264E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       147  TIME =   0.112212E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       148  TIME =   0.114550E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       149  TIME =   0.117355E+03  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       150  TIME =   0.120721E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       151  TIME =   0.124761E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       152  TIME =   0.129608E+03  NIT =     7  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       153  TIME =   0.135425E+03  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       154  TIME =   0.142405E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       155  TIME =   0.150782E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       156  TIME =   0.160833E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER      157
      ELAPSED TIME =    1.72895E+02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.120620E+01
- TIME STEP       157  TIME =   0.162040E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       158  TIME =   0.163487E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       159  TIME =   0.165224E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       160  TIME =   0.167308E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       161  TIME =   0.169809E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       162  TIME =   0.172811E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       163  TIME =   0.176413E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       164  TIME =   0.180735E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       165  TIME =   0.185921E+03  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       166  TIME =   0.192145E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       167  TIME =   0.199613E+03  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     1
- TIME STEP       168  TIME =   0.208575E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     1
+ TIME STEP       157  TIME =   0.162040E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       158  TIME =   0.163487E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       159  TIME =   0.165224E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       160  TIME =   0.167308E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       161  TIME =   0.169809E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       162  TIME =   0.172811E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       163  TIME =   0.176413E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       164  TIME =   0.180735E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       165  TIME =   0.185921E+03  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       166  TIME =   0.192145E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       167  TIME =   0.199613E+03  NIT =     2  NIT1 =     4  NIT3 =     4  NIS1 =     9
+ TIME STEP       168  TIME =   0.208575E+03  NIT =     3  NIT1 =     4  NIT3 =     4  NIS1 =     9
      ****************************************************************************************************
      EXCEEDED PERMITTED NUMBER OF ITERATIONS  ( =      201)
      TIME STEP NUMBER      169
      ELAPSED TIME =    2.19330E+02 day 
      ****************************************************************************************************
      TIME STEP SIZE REDUCED TO   0.107546E+01
- TIME STEP       169  TIME =   0.209651E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       170  TIME =   0.210941E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       171  TIME =   0.212490E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       172  TIME =   0.214348E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       173  TIME =   0.216578E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       174  TIME =   0.219254E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       175  TIME =   0.222466E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       176  TIME =   0.226319E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       177  TIME =   0.230944E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       178  TIME =   0.236493E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       179  TIME =   0.243152E+03  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     1
- TIME STEP       180  TIME =   0.250000E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     1
+ TIME STEP       169  TIME =   0.209651E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       170  TIME =   0.210941E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       171  TIME =   0.212490E+03  NIT =     2  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       172  TIME =   0.214348E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       173  TIME =   0.216578E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       174  TIME =   0.219254E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       175  TIME =   0.222466E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       176  TIME =   0.226319E+03  NIT =     3  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       177  TIME =   0.230944E+03  NIT =     4  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       178  TIME =   0.236493E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       179  TIME =   0.243152E+03  NIT =     5  NIT1 =     3  NIT3 =     3  NIS1 =     9
+ TIME STEP       180  TIME =   0.250000E+03  NIT =     6  NIT1 =     3  NIT3 =     3  NIS1 =     9
       Injection of heated water into a water table aquifer                            
      TOTAL ELAPSED TIME =  2.500000E+02 day 
      TIME STEP       180
