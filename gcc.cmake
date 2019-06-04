@@ -3,20 +3,26 @@ set(CTEST_SITE "YETI")
 set(CTEST_SOURCE_DIRECTORY "${CTEST_SCRIPT_DIRECTORY}")
 
 # set binary directory
-if (OPEN_MPI)
-  set(CTEST_BINARY_DIRECTORY "${CTEST_SCRIPT_DIRECTORY}/_cmake-${CMAKE_VER}-${OPEN_MPI}")
-else()
-  set(_SUFFIX "-${GCC_VER}")
-  if(BUILD_MPI)
-    set(_SUFFIX "-${GCC_VER}_mpi")
-  elseif(BUILD_OPENMP AND NOT BUILD_MPI)
-    set(_SUFFIX "-${GCC_VER}_openmp")
+if(OPEN_MPI)
+  set(_SUFFIX "-${OPEN_MPI}")
+  if(BUILD_OPENMP)
+    set(_SUFFIX "-${OPEN_MPI}_openmp")
   endif()
-  set(CTEST_BINARY_DIRECTORY "${CTEST_SCRIPT_DIRECTORY}/_cmake-${CMAKE_VER}-gcc${_SUFFIX}")
+  set(CTEST_BINARY_DIRECTORY "${CTEST_SCRIPT_DIRECTORY}/_cmake-${CMAKE_VER}${_SUFFIX}")
+else()
+  set(_SUFFIX "-gcc-${GCC_VER}")
+  if(BUILD_OPENMP AND BUILD_MPI)
+    set(_SUFFIX "-gcc-${GCC_VER}_mpi_openmp")
+  elseif(BUILD_MPI)
+    set(_SUFFIX "-gcc-${GCC_VER}_mpi")
+  elseif(BUILD_OPENMP)
+    set(_SUFFIX "-gcc-${GCC_VER}_openmp")
+  endif()
+  set(CTEST_BINARY_DIRECTORY "${CTEST_SCRIPT_DIRECTORY}/_cmake-${CMAKE_VER}${_SUFFIX}")
 endif()
 file(REMOVE_RECURSE "${CTEST_BINARY_DIRECTORY}")
 
-set(CTEST_BUILD_NAME "gcc${_SUFFIX}")
+set(CTEST_BUILD_NAME "cmake-${CMAKE_VER}${_SUFFIX}")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_PROJECT_NAME "vs2drt")
 
@@ -27,7 +33,13 @@ set(BUILD_OPTIONS
   -DCMAKE_Fortran_COMPILER:FILEPATH=gfortran
   )
 
-if(BUILD_MPI)
+if(BUILD_MPI AND BUILD_OPENMP)
+  set(BUILD_OPTIONS
+    ${BUILD_OPTIONS}
+    -DVS2DRT_BUILD_MPI:BOOL=ON
+    -DVS2DRT_BUILD_OPENMP:BOOL=ON
+    )
+elseif(BUILD_MPI)
   set(BUILD_OPTIONS
     ${BUILD_OPTIONS}
     -DVS2DRT_BUILD_MPI:BOOL=ON

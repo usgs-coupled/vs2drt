@@ -6,10 +6,12 @@ EXTRA_DIST = CMakeLists.txt
 dist_doc_DATA = $(DOCS)
 
 DOCS=\
-	VS2DRT_Input_Instructions.pdf\
-	phreeqc3.pdf\
+	NOTICE.TXT\
 	PhreeqcI.pdf\
+	README\
+	VS2DRT_Input_Instructions.pdf\
 	VS2DH.pdf\
 	VS2DI.pdf\
 	VS2D.pdf\
-	VS2DT.pdf
+	VS2DT.pdf\
+	phreeqc3.pdf

@@ -7,6 +7,9 @@
 /autom4te.cache
 /config
 
+# /doc/
+/doc/Makefile.in
+
 # /src/
 
 # /src/vs2008/
