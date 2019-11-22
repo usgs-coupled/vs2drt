@@ -2,6 +2,9 @@ VS2DRT RELEASE NOTES
 
 Version @VERSION@, @VER_DATE@
 
+November 20, 2019
+   Updated to version 3.6.0 of PhreeqcRM.
+
 June 2, 2019
    Revised CMake for the compilation of the batch version for Linux or Windows. 
    Previously the logic for using both MPI and OpenMP was not correct. 
