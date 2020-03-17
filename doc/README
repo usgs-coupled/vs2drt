@@ -27,7 +27,7 @@ A. Distribution files
 The following distribution package of the batch version of VS2DRT is available
 for Windows and Linux:
     
-vs2drt-@VERSION@-@REVISION@.tar.gz       Batch version for Linux or Windows VS2DRT. 
+vs2drt-@VERSION@.tar.gz                  Batch version for Linux or Windows VS2DRT.
                                          Requires compilation using CMake.
 
 -----------------------------------------------------------------------------------   
@@ -46,7 +46,7 @@ B.1. Download and install CMake
 	CMake version 3.10 or later is required. CMake can be downloaded from http://www.cmake.org/. 
 	If you download the executable, CMake is installed when you execute it. 
    
-B.2. Unzip the distribution file vs2drt-@VERSION@-@REVISION@.tar.gz
+B.2. Unzip the distribution file vs2drt-@VERSION@.tar.gz
   
 	There are several ways to uncompress tar.gz files on Windows, but you may need
 	to download some software. 7-zip is a free utility that	can be used. A git 
@@ -54,13 +54,13 @@ B.2. Unzip the distribution file vs2drt-@VERSION@-@REVISION@.tar.gz
 	You will need to uncompress the file to make a .tar file, and then extract 
 	files from the .tar file. 
 	
-	The directory phreeqc-@VERSION@-@REVISION@ is created when the files are
+	The directory vs2drt-@VERSION@ is created when the files are
 	extracted; if this directory already exists, you may want to delete or rename it
 	before extracting the files.
 
 	The following directory structure is created:
    
-	vs2drt-@VERSION@-@REVISION@/
+	vs2drt-@VERSION@/
 	   database/               Phreeqc database files.
 	   doc/                    Documentation.         
 	   examples/               VS2DRT examples input and output files 
@@ -79,7 +79,7 @@ B.3.  Generate a Visual Studio solution
    
       Fill in the top two lines:
          Where is the source code: 
-            The top level directory (i.e. c:/vs2drt-@VERSION@-@REVISION@).
+            The top level directory (i.e. c:/vs2drt-@VERSION@).
          Where to build the binaries: 
             A new directory. It is suggested that the name of the directory include
 	        the characteristics of the library that is built, including the VS
@@ -217,18 +217,18 @@ Follow the steps below to extract the files from a distribution tar file.
 
    Steps in extracting files                            Explanation
    ----------------------------------------             -----------------------------------
-   gunzip vs2drt-@VERSION@-@REVISION@.source.tar.gz     Uncompress the tar.gz file.
+   gunzip vs2drt-@VERSION@.source.tar.gz                Uncompress the tar.gz file.
  
-   tar -xvpof vs2drt-@VERSION@-@REVISION@.source.tar    Extract files from the tar file.
+   tar -xvpof vs2drt-@VERSION@.source.tar               Extract files from the tar file.
 
-   The directory vs2drt-@VERSION@-@REVISION@ is created when the files are
+   The directory vs2drt-@VERSION@ is created when the files are
    extracted; if this directory already exists, you may want to delete or rename it
    before extracting the files.
    
 The following directory structure will be created (the contents of each 
 directory are shown to the right):
 
-	vs2drt-@VERSION@-@REVISION@/
+	vs2drt-@VERSION@/
 	   database/               Phreeqc database files.
 	   doc/                    Documentation.         
 	   examples/               VS2DRT examples input and output files 
@@ -238,7 +238,7 @@ Notes: A compiled executable is not included in the Linux distribution.
 
 C.2.  Change directory to the directory that was extracted from the tar file.
 
-   cd vs2drt-@VERSION@-@REVISION@
+   cd vs2drt-@VERSION@
 
 C.3.  Make a directory, for example, _openmp.
     
@@ -427,16 +427,16 @@ F. Documentation
 
 VS2DRT and PHREEQC:
    
-Charlton, S.R., and Parkhurst, D.L. 2002. PHREEQCI—A graphical user interface to the 
-geochemical model PHREEQC. U.S. Geological Survey Fact Sheet 031–02. An electronic 
-version of this report can be downloaded from: 
-https://pubs.er.usgs.gov/publication/fs03102 
+Charlton, S.R., and Parkhurst, D.L. 2002. PHREEQCI-A graphical user interface to the
+geochemical model PHREEQC. U.S. Geological Survey Fact Sheet 031-02. An electronic
+version of this report can be downloaded from:
+https://pubs.er.usgs.gov/publication/fs03102
  
-Charlton, S.R., and Parkhurst, D.L., 2011, Modules based on the geochemical model PHREEQC for 
+Charlton, S.R., and Parkhurst, D.L., 2011, Modules based on the geochemical model PHREEQC for
 use in scripting and programming languages: Computers & Geosciences, v. 37, p. 1653-1663.
 
 Haile, Sosina S. 2013. VS2DRT: Variable saturated two dimensional reactive transport 
-modeling in the vadose zone. (Doctoral dissertation) Freiberg Online Geoscience 34: 1–152.
+modeling in the vadose zone. (Doctoral dissertation) Freiberg Online Geoscience 34: 1-152.
 
 Healy, R.W., 1990, Simulation of solute transport in variably saturated porous media with 
 supplemental information on modifications to the U.S. Geological Survey's Computer Program 
@@ -467,14 +467,14 @@ geochemical calculations: U.S. Geological Survey Water-Resources Investigations 
 99-4259, 312 p. http://pubs.er.usgs.gov/publication/wri994259.
 
 Parkhurst, D.L., and Appelo, C.A.J. 2013. Description of input and examples for PHREEQC 
-Version 3—a computer program for speciation, batch-reaction, one-dimensional transport, 
+Version 3-a computer program for speciation, batch-reaction, one-dimensional transport,
 and inverse geochemical calculations. U.S. Geological Survey Techniques and Methods 
 6-A43. An electronic version of this report can be downloaded from: 
 https://pubs.er.usgs.gov/publication/tm6A43
  
 Parkhurst, D.L., and Wissmeier, L. 2015. PhreeqcRM: A reaction module for transport 
 simulators based on the geochemical model PHREEQC. Advances in Water Resources 83: 
-176–189. DOI: 10.1016/j.advwatres.2015.06.001.
+176-189. DOI: 10.1016/j.advwatres.2015.06.001.
 
 Isotopes:
 
