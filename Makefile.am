@@ -209,11 +209,15 @@ VS2DRT_SRC=\
 	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqcPhastLib.h\
 	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqcPhastLib.cpp\
 	src/PhreeqcRM/src/RM_interface.F90\
+	src/PhreeqcRM/src/BMI_methods.cpp\
+	src/PhreeqcRM/src/BMI_Var.h\
 	src/PhreeqcRM/src/PhreeqcRM.cpp\
 	src/PhreeqcRM/src/RM_interface_F.cpp\
 	src/PhreeqcRM/src/PhreeqcRM.h\
 	src/PhreeqcRM/src/RM_interface_F.h\
 	src/PhreeqcRM/src/RM_interface_C.h\
+	src/PhreeqcRM/src/YAMLPhreeqcRM.cpp\
+	src/PhreeqcRM/src/YAMLPhreeqcRM.h\
 	src/PhreeqcRM/src/IrmResult.h\
 	src/FileHandler.cpp\
 	src/Call_RM.F90\
