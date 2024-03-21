@@ -43,6 +43,10 @@ AC_PROG_LN_S
 AC_PROG_CPP
 AC_PROG_F77
 AC_PROG_CXX
+
+# c++11 is required
+AX_CXX_COMPILE_STDCXX(11, [ext], [mandatory])
+
 AX_PROG_FC_MPI([test x"$with_mpi" != xno],[use_mpi=yes],[
   use_mpi=no
   if test x"$with_mpi" = xyes; then
@@ -157,6 +161,7 @@ AC_CONFIG_FILES([
   database/Makefile
   doc/Makefile
   examples/Makefile
+  src/PhreeqcRM/irm_dll_export.h
 ])
 
 AC_OUTPUT

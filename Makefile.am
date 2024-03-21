@@ -3,7 +3,8 @@ EXTRA_DIST=CMakeLists.txt \
            src/CMakeLists.txt \
            src/PhreeqcRM/CMakeLists.txt
 
-AM_CPPFLAGS=-I$(srcdir)/src/PhreeqcRM/src \
+AM_CPPFLAGS=-I$(top_builddir)/src/PhreeqcRM \
+            -I$(srcdir)/src/PhreeqcRM/src \
             -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast \
             -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc \
             -I$(srcdir)/src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqc/phreeqcpp \
@@ -208,17 +209,27 @@ VS2DRT_SRC=\
 	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqcPhast.f90.inc\
 	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqcPhastLib.h\
 	src/PhreeqcRM/src/IPhreeqcPhast/IPhreeqcPhastLib.cpp\
-	src/PhreeqcRM/src/RM_interface.F90\
-	src/PhreeqcRM/src/BMI_methods.cpp\
-	src/PhreeqcRM/src/BMI_Var.h\
+	src/PhreeqcRM/src/BMI_interface_F.cpp\
+	src/PhreeqcRM/src/BMI_interface_F.h\
+	src/PhreeqcRM/src/bmi.hxx\
+	src/PhreeqcRM/src/BMIPhreeqcRM.cpp\
+	src/PhreeqcRM/src/BMIPhreeqcRM.h\
+	src/PhreeqcRM/src/BMIVariant.cpp\
+	src/PhreeqcRM/src/BMIVariant.h\
+	src/PhreeqcRM/src/IrmResult.h\
 	src/PhreeqcRM/src/PhreeqcRM.cpp\
-	src/PhreeqcRM/src/RM_interface_F.cpp\
 	src/PhreeqcRM/src/PhreeqcRM.h\
-	src/PhreeqcRM/src/RM_interface_F.h\
 	src/PhreeqcRM/src/RM_interface_C.h\
+	src/PhreeqcRM/src/RM_interface_F.cpp\
+	src/PhreeqcRM/src/RM_interface_F.h\
+	src/PhreeqcRM/src/RM_interface.F90\
+	src/PhreeqcRM/src/RMVARS.h\
+	src/PhreeqcRM/src/VarManager.cpp\
+	src/PhreeqcRM/src/VarManager.h\
+	src/PhreeqcRM/src/YAML_interface_F.cpp\
+	src/PhreeqcRM/src/YAML_interface_F.h\
 	src/PhreeqcRM/src/YAMLPhreeqcRM.cpp\
 	src/PhreeqcRM/src/YAMLPhreeqcRM.h\
-	src/PhreeqcRM/src/IrmResult.h\
 	src/FileHandler.cpp\
 	src/Call_RM.F90\
 	src/FileHandler.h\
