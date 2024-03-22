@@ -10,6 +10,10 @@
 # /doc/
 /doc/Makefile.in
 
+# /examples/
+examples/Makefile.in
+
+
 # /src/
 
 # /src/vs2008/
